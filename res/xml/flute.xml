@@ -1,0 +1,3547 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<instrument name="Flute" image="@drawable/musiclove" 
+    xmlns="http://www.adamfoster.net/instrument" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://www.adamfoster.net/instrument instrument.xsd"
+    xsi:noNamespaceSchemaLocation="instrument.xsd" >
+    
+    <baseKeys>
+        <baseKey name="C" positionx="0.5" positiony="0.3" type="circle" radius="7.5" />
+        <baseKey name="Bb" positionx="0.44" positiony="0.33" type="circle" radius="5.0" />
+        <baseKey name="B" positionx="0.42" positiony="0.36" type="rectangle" width="8.0" height="15.0" />
+        <baseKey name="A" positionx="0.5" positiony="0.375" type="circle" radius="7.5" />
+        <baseKey name="G" positionx="0.5" positiony="0.45" type="circle" radius="7.5" />
+        <baseKey name="G#" positionx="0.53" positiony="0.48" type="rectangle" width="12.0" height="6.0" />
+        <!-- break -->
+        <baseKey name="F" positionx="0.5" positiony="0.6" type="circle" radius="7.5" />
+        <baseKey name="E" positionx="0.5" positiony="0.675" type="circle" radius="7.5" />
+        <baseKey name="D" positionx="0.5" positiony="0.75" type="circle" radius="7.5" />
+        <!-- break -->
+        <baseKey name="EbFoot" positionx="0.48" positiony="0.795" type="rectangle" width="15.0" height="7.5" />
+        <baseKey name="DbFoot" positionx="0.48" positiony="0.825" type="rectangle" width="5.0" height="15.0" />
+        <baseKey name="CFoot" positionx="0.5" positiony="0.825" type="rectangle" width="4.0" height="15.0" />
+        <baseKey name="BFoot" positionx="0.52" positiony="0.825" type="rectangle" width="4.0" height="15.0" />
+        <baseKey name="Gizmo" positionx="0.54" positiony="0.86" type="circle" radius="3.0" />
+        <!-- trills -->
+        <baseKey name="T1" positionx="0.54" positiony="0.63" type="rectangle" width="6.0" height="4.5" />
+        <baseKey name="T2" positionx="0.54" positiony="0.70" type="rectangle" width="6.0" height="4.5" />
+        <baseKey name="BbTrill" positionx="0.47" positiony="0.54" type="circle" radius="3.0" />
+        <baseKey name="C#Trill" positionx="0.46" positiony="0.57" type="circle" radius="3.0" />
+    </baseKeys>
+    
+	<set name="Notes">
+	   <!-- debug only -->
+        <note name="All"> 
+            <fingering name="Down" comment="">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>Bb</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>G#</key>
+                    <key>F</key>
+                    <key>E</key>
+                    <key>D</key>
+                    <key>EbFoot</key>
+                    <key>DbFoot</key>
+                    <key>CFoot</key>
+                    <key>BFoot</key>
+                    <key>Gizmo</key>
+                    <key>T1</key>
+                    <key>T2</key>
+                    <key>C#Trill</key>
+                    <key>BbTrill</key>
+                </keysDown>
+            </fingering>
+            <fingering name="Ups" comment="">
+                <keysTrillUp>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>Bb</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>G#</key>
+                    <key>F</key>
+                    <key>E</key>
+                    <key>D</key>
+                    <key>EbFoot</key>
+                    <key>DbFoot</key>
+                    <key>CFoot</key>
+                    <key>BFoot</key>
+                    <key>Gizmo</key>
+                    <key>T1</key>
+                    <key>T2</key>
+                    <key>C#Trill</key>
+                    <key>BbTrill</key>
+                </keysTrillUp>
+            </fingering>
+        </note>
+        <note name="B3">
+            <fingering name="Standard" comment="">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>F</key>
+                    <key>E</key>
+                    <key>D</key>
+                    <key>DbFoot</key>
+                    <key>CFoot</key>
+                    <key>BFoot</key>
+                </keysDown>
+            </fingering>
+        </note>
+	    <note name="C4">
+	        <fingering name="Standard" comment="">
+	            <keysDown>
+	                <key>C</key>
+	                <key>B</key>
+	                <key>A</key>
+	                <key>G</key>
+	                <key>F</key>
+	                <key>E</key>
+	                <key>D</key>
+	                <key>DbFoot</key>
+                    <key>CFoot</key>
+	            </keysDown>
+	        </fingering>
+	    </note>
+	    <note name="C#4 / Db4">
+	        <fingering name="Standard" comment="">
+	            <keysDown>
+	                <key>C</key>
+	                <key>B</key>
+	                <key>A</key>
+	                <key>G</key>
+	                <key>F</key>
+	                <key>E</key>
+	                <key>D</key>
+	                <key>DbFoot</key>
+	            </keysDown>
+	        </fingering>
+	    </note>
+	    <note name="D4">
+	        <fingering name="Standard" comment="">
+	            <keysDown>
+	                <key>C</key>
+	                <key>B</key>
+	                <key>A</key>
+	                <key>G</key>
+	                <key>F</key>
+	                <key>E</key>
+	                <key>D</key>
+	            </keysDown>
+	        </fingering>
+	    </note>
+	    <note name="D#4 / Eb4">
+	        <fingering name="Standard" comment="">
+	            <keysDown>
+	                <key>C</key>
+	                <key>B</key>
+	                <key>A</key>
+	                <key>G</key>
+	                <key>F</key>
+	                <key>E</key>
+	                <key>D</key>
+	                <key>EbFoot</key>
+	            </keysDown>
+	        </fingering>
+	    </note>
+        <note name="E4">
+            <fingering name="Standard" comment="">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>F</key>
+                    <key>E</key>
+                    <key>EbFoot</key>
+                </keysDown>
+            </fingering>
+        </note>
+        <note name="F4">
+            <fingering name="Standard" comment="">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>F</key>
+                    <key>EbFoot</key>
+                </keysDown>
+            </fingering>
+        </note>
+        <note name="F#4 / Gb4">
+            <fingering name="Standard" comment="">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>D</key>
+                    <key>EbFoot</key>
+                </keysDown>
+            </fingering>
+        </note>
+        <note name="G4">
+            <fingering name="Standard" comment="">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>EbFoot</key>
+                </keysDown>
+            </fingering>
+        </note>
+        <note name="G#4 / Ab4">
+            <fingering name="Standard" comment="">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>G#</key>
+                    <key>EbFoot</key>
+                </keysDown>
+            </fingering>
+        </note>
+        <note name="A4">
+            <fingering name="Standard" comment="">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>EbFoot</key>
+                </keysDown>
+            </fingering>
+        </note>
+        <note name="A#4 / Bb4">
+            <fingering name="Standard" comment="Using the Bb Thumb Key. Use in passages without B-naturals">
+                <keysDown>
+                    <key>C</key>
+                    <key>Bb</key>
+                    <key>EbFoot</key>
+                </keysDown>
+            </fingering>
+            <fingering name="Alternate" comment="When Bb Thumb can't be used">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>F</key>
+                    <key>EbFoot</key>
+                </keysDown>
+            </fingering>
+            <fingering name="Trill" comment="For trills or passing passages using B-natural">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>BbTrill</key>
+                    <key>EbFoot</key>
+                </keysDown>
+            </fingering>
+        </note>
+        <note name="B4">
+            <fingering name="Standard" comment="">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>EbFoot</key>
+                </keysDown>
+            </fingering>
+        </note>
+        
+	    <!-- Second Register -->
+        <note name="C5">
+            <fingering name="Standard" comment="">
+                <keysDown>
+                    <key>C</key>
+                    <key>EbFoot</key>
+                </keysDown>
+            </fingering>
+        </note>
+        <note name="C#5 / Db5">
+            <fingering name="Standard" comment="">
+                <keysDown>
+                    <key>EbFoot</key>
+                </keysDown>
+            </fingering>
+        </note>
+        <note name="D5">
+            <fingering name="Standard" comment="">
+                <keysDown>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>F</key>
+                    <key>E</key>
+                    <key>D</key>
+                </keysDown>
+            </fingering>
+        </note>
+        <note name="D#5 / Eb5">
+            <fingering name="Standard" comment="">
+                <keysDown>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>F</key>
+                    <key>E</key>
+                    <key>D</key>
+                    <key>EbFoot</key>
+                </keysDown>
+            </fingering>
+        </note>
+        <note name="E5">
+            <fingering name="Standard" comment="">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>F</key>
+                    <key>E</key>
+                    <key>EbFoot</key>
+                </keysDown>
+            </fingering>
+        </note>
+        <note name="F5">
+            <fingering name="Standard" comment="">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>F</key>
+                    <key>EbFoot</key>
+                </keysDown>
+            </fingering>
+        </note>
+        <note name="F#5 / Gb5">
+            <fingering name="Standard" comment="">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>D</key>
+                    <key>EbFoot</key>
+                </keysDown>
+            </fingering>
+        </note>
+        <note name="G5">
+            <fingering name="Standard" comment="">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>EbFoot</key>
+                </keysDown>
+            </fingering>
+        </note>
+        <note name="G#5 / Ab5">
+            <fingering name="Standard" comment="">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>G#</key>
+                    <key>EbFoot</key>
+                </keysDown>
+            </fingering>
+        </note>
+        <note name="A5">
+            <fingering name="Standard" comment="">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>EbFoot</key>
+                </keysDown>
+            </fingering>
+        </note>
+        <note name="A#5 / Bb5">
+            <fingering name="Standard" comment="Using the Bb Thumb Key">
+                <keysDown>
+                    <key>C</key>
+                    <key>Bb</key>
+                    <key>EbFoot</key>
+                </keysDown>
+            </fingering>
+            <fingering name="Alternate" comment="When Bb Thumb can't be used">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>F</key>
+                    <key>EbFoot</key>
+                </keysDown>
+            </fingering>
+            <fingering name="Trill" comment="For trills or passing passages using B-natural">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>BbTrill</key>
+                    <key>EbFoot</key>
+                </keysDown>
+            </fingering>
+        </note>
+        <note name="B5">
+            <fingering name="Standard" comment="">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>EbFoot</key>
+                </keysDown>
+            </fingering>
+        </note>
+        
+    <!-- Third Register -->
+        <note name="C6">
+            <fingering name="Standard" comment="">
+                <keysDown>
+                    <key>C</key>
+                    <key>EbFoot</key>
+                </keysDown>
+            </fingering>
+        </note>
+        <note name="C#6 / Db6">
+            <fingering name="Standard" comment="">
+                <keysDown>
+                    <key>EbFoot</key>
+                </keysDown>
+            </fingering>
+        </note>
+        <note name="D6">
+            <fingering name="Standard" comment="">
+                <keysDown>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>EbFoot</key>
+                </keysDown>
+            </fingering>
+        </note>
+        <note name="D#6 / Eb6">
+            <fingering name="Standard" comment="">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>G#</key>
+                    <key>F</key>
+                    <key>E</key>
+                    <key>D</key>
+                    <key>EbFoot</key>
+                </keysDown>
+            </fingering>
+        </note>
+        <note name="E6">
+            <fingering name="Standard" comment="">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>F</key>
+                    <key>E</key>
+                    <key>EbFoot</key>
+                </keysDown>
+            </fingering>
+        </note>
+        <note name="F6">
+            <fingering name="Standard" comment="">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>G</key>
+                    <key>F</key>
+                    <key>EbFoot</key>
+                </keysDown>
+            </fingering>
+        </note>
+        <note name="F#6 / Gb6">
+            <fingering name="Standard" comment="Must not use Bb Thumb">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>G</key>
+                    <key>D</key>
+                    <key>EbFoot</key>
+                </keysDown>
+            </fingering>
+        </note>
+        <note name="G6">
+            <fingering name="Standard" comment="">
+                <keysDown>
+                    <key>C</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>EbFoot</key>
+                </keysDown>
+            </fingering>
+        </note>
+        <note name="G#6 / Ab6">
+            <fingering name="Standard" comment="">
+                <keysDown>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>G#</key>
+                    <key>EbFoot</key>
+                </keysDown>
+            </fingering>
+        </note>
+        <note name="A6">
+            <fingering name="Standard" comment="">
+                <keysDown>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>F</key>
+                    <key>EbFoot</key>
+                </keysDown>
+            </fingering>
+        </note>
+        <note name="A#6 / Bb6">
+            <fingering name="Standard" comment="">
+                <keysDown>
+                    <key>B</key>
+                    <key>F</key>
+                    <key>T1</key>
+                    <key>EbFoot</key>
+                </keysDown>
+            </fingering>
+        </note>    
+        <note name="B6">
+            <fingering name="Standard" comment="">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>G</key>
+                    <key>T2</key>
+                    <key>EbFoot</key>
+                </keysDown>
+            </fingering>
+        </note>
+        
+        <!-- forth register -->
+        <note name="C7">
+            <fingering name="Standard" comment="For use with B-foot">
+                <keysDown>
+                    <key>C</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>G#</key>
+                    <key>F</key>
+                    <key>Gizmo</key>
+                </keysDown>
+            </fingering>
+            <fingering name="C-Foot" comment="For use with B-foot">
+                <keysDown>
+                    <key>C</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>G#</key>
+                    <key>F</key>
+                    <key>EbFoot</key>
+                </keysDown>
+            </fingering>
+        </note>
+    
+        <note name="C#7 / Db7">
+            <fingering name="Alt1" comment="">
+                <keysDown>
+                    <key>A</key>
+                    <key>G#</key>
+                    <key>F</key>
+                </keysDown>
+            </fingering>
+            <fingering name="Alt2" comment="">
+                <keysDown>
+                    <key>A</key>
+                    <key>G#</key>
+                    <key>F</key>
+                    <key>DbFoot</key>
+                    <key>CFoot</key>
+                </keysDown>
+            </fingering>
+            <fingering name="Alt3" comment="Sharp">
+                <keysDown>
+                    <key>A</key>
+                    <key>G#</key>
+                    <key>F</key>
+                    <key>D</key>
+                    <key>DbFoot</key>
+                    <key>CFoot</key>
+                </keysDown>
+            </fingering>
+            <fingering name="Alt4" comment="">
+                <keysDown>
+                    <key>A</key>
+                    <key>G#</key>
+                    <key>F</key>
+                    <key>E</key>
+                    <key>D</key>
+                    <key>EbFoot</key>
+                </keysDown>
+            </fingering>
+            <fingering name="Alt5" comment="">
+                <keysDown>
+                    <key>A</key>
+                    <key>F</key>
+                    <key>E</key>
+                    <key>D</key>
+                    <key>EbFoot</key>
+                </keysDown>
+            </fingering>
+            <fingering name="Alt6" comment="">
+                <keysDown>
+                    <key>A</key>
+                    <key>F</key>
+                    <key>D</key>
+                    <key>DbFoot</key>
+                    <key>CFoot</key>
+                </keysDown>
+            </fingering>
+            <fingering name="Alt7" comment="">
+                <keysDown>
+                    <key>A</key>
+                    <key>F</key>
+                    <key>DbFoot</key>
+                    <key>CFoot</key>
+                </keysDown>
+            </fingering>
+            <fingering name="Alt8" comment="">
+                <keysDown>
+                    <key>A</key>
+                    <key>F</key>
+                    <key>Gizmo</key>
+                </keysDown>
+            </fingering>
+            <fingering name="Alt9" comment="">
+                <keysDown>
+                    <key>A</key>
+                    <key>F</key>
+                </keysDown>
+            </fingering>
+            <fingering name="Alt10" comment="Flat">
+                <keysDown>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>G#</key>
+                    <key>F</key>
+                </keysDown>
+            </fingering>
+        </note>
+    
+       <note name="D7">
+            <fingering name="Alt1" comment="">
+                <keysDown>
+                    <key>B</key>
+                    <key>G</key>
+                    <key>F</key>
+                    <key>E</key>
+                    <key>DbFoot</key>
+                    <key>CFoot</key>
+                </keysDown>
+            </fingering>
+            <fingering name="Alt2" comment="">
+                <keysDown>
+                    <key>B</key>
+                    <key>G</key>
+                    <key>F</key>
+                    <key>E</key>
+                    <key>EbFoot</key>
+                </keysDown>
+            </fingering>
+            <fingering name="Alt3" comment="Roll out">
+                <keysDown>
+                    <key>Bb</key>
+                    <key>E</key>
+                    <key>D</key>
+                    <key>EbFoot</key>
+                </keysDown>
+            </fingering>
+            <fingering name="Alt4" comment="Good response. Useful in Prokoviev Sonata, 1st Mvt">
+                <keysDown>
+                    <key>Bb</key>
+                    <key>D</key>
+                    <key>DbFoot</key>
+                    <key>CFoot</key>
+                    <key>BFoot</key>
+                </keysDown>
+            </fingering>
+            <fingering name="Alt5" comment="Easy to finger, harder response than when foot keys are also depressed">
+                <keysDown>
+                    <key>Bb</key>
+                    <key>D</key>
+                </keysDown>
+            </fingering>
+        </note>
+    
+       <note name="D#7 / Eb7">
+            <fingering name="Alt1" comment="">
+                <keysDown>
+                    <key>B</key>
+                    <key>G</key>
+                    <key>G#</key>
+                    <key>T1</key>
+                    <key>E</key>
+                </keysDown>
+            </fingering>
+            <fingering name="Alt2" comment=" For B-foot">
+                <keysDown>
+                    <key>B</key>
+                    <key>G</key>
+                    <key>T1</key>
+                    <key>E</key>
+                </keysDown>
+            </fingering>
+            <fingering name="Alt3" comment="">
+                <keysDown>
+                    <key>B</key>
+                    <key>G</key>
+                    <key>G#</key>
+                    <key>T1</key>
+                    <key>E</key>
+                    <key>DbFoot</key>
+                    <key>C</key>
+                </keysDown>
+            </fingering>
+            <fingering name="Alt4" comment="Flat">
+                <keysDown>
+                    <key>B</key>
+                    <key>G</key>
+                    <key>F</key>
+                    <key>T1</key>
+                    <key>DbFoot</key>
+                    <key>C</key>
+                </keysDown>
+            </fingering>
+            <fingering name="Alt5" comment="">
+                <keysDown>
+                    <key>B</key>
+                    <key>G</key>
+                    <key>F</key>
+                    <key>T1</key>
+                    <key>EbFoot</key>
+                </keysDown>
+            </fingering>
+            <fingering name="Alt6" comment="Flat">
+                <keysDown>
+                    <key>B</key>
+                    <key>G</key>
+                    <key>F</key>
+                    <key>T1</key>
+                    <key>E</key>
+                    <key>EbFoot</key>
+                </keysDown>
+            </fingering>
+            <fingering name="Alt7" comment="Flat">
+                <keysDown>
+                    <key>B</key>
+                    <key>G</key>
+                    <key>E</key>
+                </keysDown>
+            </fingering>
+            <fingering name="Alt8" comment="">
+                <keysDown>
+                    <key>B</key>
+                    <key>G</key>
+                    <key>E</key>
+                    <key>DbFoot</key>
+                    <key>C</key>
+                </keysDown>
+            </fingering>
+            <fingering name="Alt9" comment="">
+                <keysDown>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>F</key>
+                    <key>T1</key>
+                    <key>EbFoot</key>
+                </keysDown>
+            </fingering>
+            <fingering name="Alt10" comment="">
+                <keysDown>
+                    <key>B</key>
+                    <key>G</key>
+                    <key>G#</key>
+                    <key>F</key>
+                    <key>T1</key>
+                    <key>EbFoot</key>
+                </keysDown>
+            </fingering>
+            <fingering name="Alt11" comment="">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>G#</key>
+                    <key>F</key>
+                    <key>T1</key>
+                    <key>D</key>
+                    <key>EbFoot</key>
+                </keysDown>
+            </fingering>
+       </note>
+       
+       <note name="E7">
+            <fingering name="Alt1" comment="">
+                <keysDown>
+                    <key>C</key>
+                    <key>A</key>
+                    <key>E</key>
+                    <key>T2</key>
+                </keysDown>
+                <keysHalfDown>
+                    <key>G</key>
+                </keysHalfDown>
+            </fingering>
+            <fingering name="Alt2" comment="Sharp">
+                <keysDown>
+                    <key>C</key>
+                    <key>A</key>
+                    <key>E</key>
+                    <key>T2</key>
+                </keysDown>
+            </fingering>
+            <fingering name="Alt3" comment="Sharp">
+                <keysDown>
+                    <key>C</key>
+                    <key>A</key>
+                    <key>G#</key>
+                    <key>E</key>
+                    <key>T2</key>
+                </keysDown>
+            </fingering>
+            <fingering name="Alt4" comment="Flat">
+                <keysDown>
+                    <key>C</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>G#</key>
+                    <key>T1</key>
+                    <key>T2</key>
+                    <key>D</key>
+                    <key>DbFoot</key>
+                    <key>CFoot</key>
+                </keysDown>
+            </fingering>
+            <fingering name="Alt4" comment="Difficult to finger on open-hole models">
+                <keysDown>
+                    <key>C</key>
+                    <key>A</key>
+                    <key>T1</key>
+                    <key>E</key>
+                    <key>T2</key>
+                    <key>D</key>
+                    <key>DbFoot</key>
+                    <key>CFoot</key>
+                </keysDown>
+            </fingering>
+            <fingering name="Alt5" comment="Awkward but in tune. Press both the rim of F key nd the D trill key with RH 1">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>G#</key>
+                    <key>T1</key>
+                    <key>T2</key>
+                    <key>D</key>
+                    <key>EbFoot</key>
+                    <key>DbFoot</key>
+                </keysDown>
+                <ringsDown>
+                    <key>F</key>
+                </ringsDown>
+            </fingering>
+            <fingering name="Alt6" comment="">
+                <keysDown>
+                    <key>C</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>T1</key>
+                    <key>E</key>
+                    <key>T2</key>
+                    <key>DbFoot</key>
+                    <key>CFoot</key>
+                </keysDown>
+            </fingering>
+            <fingering name="Alt7" comment="">
+                <keysDown>
+                    <key>C</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>F</key>
+                    <key>E</key>
+                    <key>T2</key>
+                </keysDown>
+            </fingering>
+            <fingering name="Alt8" comment="">
+                <keysDown>
+                    <key>C</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>E</key>
+                    <key>T2</key>
+                    <key>D</key>
+                </keysDown>
+            </fingering>
+            <fingering name="Alt9" comment="">
+                <keysDown>
+                    <key>C</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>E</key>
+                    <key>T2</key>
+                </keysDown>
+            </fingering>
+            <fingering name="Alt10" comment="Slightly Sharp">
+                <keysDown>
+                    <key>C</key>
+                    <key>A</key>
+                    <key>E</key>
+                    <key>T2</key>
+                </keysDown>
+                <ringsDown>
+                    <key>G</key>
+                </ringsDown>
+            </fingering>
+            <fingering name="Alt11" comment="Sharp. Excellent Reponse">
+                <keysDown>
+                    <key>C</key>
+                    <key>A</key>
+                    <key>E</key>
+                    <key>T2</key>
+                    <key>EbFoot</key>
+                    <key>DbFoot</key>
+                </keysDown>
+            </fingering>
+            <fingering name="Alt12" comment="Sharp, requires very fast air stream">
+                <keysDown>
+                    <key>C</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>F</key>
+                    <key>E</key>
+                </keysDown>
+            </fingering>
+            <fingering name="Alt13" comment="">
+                <keysDown>
+                    <key>C</key>
+                    <key>A</key>
+                    <key>F</key>
+                    <key>E</key>
+                    <key>DbFoot</key>
+                    <key>CFoot</key>
+                </keysDown>
+            </fingering>
+            <fingering name="Alt14" comment="">
+                <keysDown>
+                    <key>C</key>
+                    <key>A</key>
+                    <key>F</key>
+                    <key>E</key>
+                    <key>T2</key>
+                </keysDown>
+            </fingering>
+            <fingering name="Alt15" comment="">
+                <keysDown>
+                    <key>C</key>
+                    <key>A</key>
+                    <key>T1</key>
+                    <key>E</key>
+                    <key>D</key>
+                    <key>DbFoot</key>
+                    <key>CFoot</key>
+                </keysDown>
+            </fingering>
+            <fingering name="Alt16" comment="Good response">
+                <keysDown>
+                    <key>C</key>
+                    <key>A</key>
+                    <key>T1</key>
+                    <key>D</key>
+                    <key>DbFoot</key>
+                    <key>CFoot</key>
+                </keysDown>
+            </fingering>
+            <fingering name="Alt17" comment="">
+                <keysDown>
+                    <key>C</key>
+                    <key>A</key>
+                    <key>D</key>
+                    <key>EbFoot</key>
+                </keysDown>
+            </fingering>
+            <fingering name="Alt18" comment="">
+                <keysDown>
+                    <key>C</key>
+                    <key>A</key>
+                    <key>G#</key>
+                    <key>T2</key>
+                    <key>D</key>
+                    <key>EbFoot</key>
+                </keysDown>
+            </fingering>
+            <fingering name="Alt19" comment="">
+                <keysDown>
+                    <key>C</key>
+                    <key>A</key>
+                    <key>T2</key>
+                    <key>D</key>
+                    <key>EbFoot</key>
+                </keysDown>
+            </fingering>
+        </note>       
+       
+       <note name="F7">
+            <fingering name="Alt1" comment="">
+                <keysDown>
+                    <key>A</key>
+                    <key>E</key>
+                    <key>T2</key>
+                </keysDown>
+            </fingering>
+            <fingering name="Alt2" comment="Better response">
+                <keysDown>
+                    <key>A</key>
+                    <key>E</key>
+                    <key>T2</key>
+                </keysDown>
+                <ringsDown>
+                    <key>G</key>
+                </ringsDown>
+            </fingering>
+            <fingering name="Alt3" comment="">
+                <keysDown>
+                    <key>A</key>
+                    <key>T2</key>
+                    <key>D</key>
+                    <key>EbFoot</key>
+                    <key>DbFoot</key>
+                </keysDown>
+            </fingering>
+            <fingering name="Alt4" comment="Flat. Excellent Response">
+                <keysDown>
+                    <key>C</key>
+                    <key>T2</key>
+                    <key>D</key>
+                    <key>EbFoot</key>
+                    <key>DbFoot</key>
+                </keysDown>
+                <ringsDown>
+                    <key>A</key>
+                </ringsDown>
+            </fingering>
+            <fingering name="Alt5" comment="Slightly Sharp">
+                <keysDown>
+                    <key>T2</key>
+                    <key>D</key>
+                    <key>EbFoot</key>
+                    <key>DbFoot</key>
+                </keysDown>
+                <ringsDown>
+                    <key>A</key>
+                </ringsDown>
+            </fingering>
+            <fingering name="Alt6" comment="Sharp. B-Foot">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>D</key>
+                    <key>EbFoot</key>
+                    <key>DbFoot</key>
+                    <key>CFoot</key>
+                    <key>BFoot</key>
+                </keysDown>
+            </fingering>
+            <fingering name="Alt7" comment="">
+                <keysDown>
+                    <key>C</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>F</key>
+                    <key>T1</key>
+                    <key>T2</key>
+                </keysDown>
+            </fingering>
+            <fingering name="Alt8" comment="">
+                <keysDown>
+                    <key>C</key>
+                    <key>A</key>
+                    <key>G#</key>
+                    <key>F</key>
+                    <key>T1</key>
+                    <key>T2</key>
+                    <key>DbFoot</key>
+                    <key>CFoot</key>
+                </keysDown>
+            </fingering>
+            <fingering name="Alt9" comment="">
+                <keysDown>
+                    <key>C</key>
+                    <key>A</key>
+                    <key>G#</key>
+                    <key>T1</key>
+                    <key>T2</key>
+                    <key>DbFoot</key>
+                    <key>CFoot</key>
+                </keysDown>
+            </fingering>
+        </note>
+
+
+       <note name="F#7 / Gb7">
+            <fingering name="Alt1" comment="">
+                <keysDown>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>G#</key>
+                    <key>E</key>
+                    <key>D</key>
+                </keysDown>
+            </fingering>
+            <fingering name="Alt2" comment="">
+                <keysDown>
+                    <key>B</key>
+                    <key>C</key>
+                    <key>G</key>
+                    <key>F</key>
+                    <key>T2</key>
+                    <key>D</key>
+                </keysDown>
+            </fingering>
+            <fingering name="Alt3" comment="">
+                <keysDown>
+                    <key>B</key>
+                    <key>C</key>
+                    <key>G</key>
+                    <key>F</key>
+                    <key>T2</key>
+                    <key>D</key>
+                    <key>EbFoot</key>
+                    <key>DbFoot</key>
+                </keysDown>
+            </fingering>
+            <fingering name="Alt4" comment="B-Foot">
+                <keysDown>
+                    <key>B</key>
+                    <key>G</key>
+                    <key>F</key>
+                    <key>T2</key>
+                    <key>D</key>
+                    <key>EbFoot</key>
+                    <key>DbFoot</key>
+                    <key>CFoot</key>
+                    <key>BFoot</key>
+                </keysDown>
+            </fingering>
+            <fingering name="Alt4" comment="">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>G</key>
+                    <key>F</key>
+                    <key>T2</key>
+                    <key>D</key>
+                    <key>DbFoot</key>
+                    <key>CFoot</key>
+                </keysDown>
+            </fingering>
+            <fingering name="Alt5" comment="Excellent Response">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>G</key>
+                    <key>F</key>
+                    <key>D</key>
+                    <key>EbFoot</key>
+                    <key>DbFoot</key>
+                </keysDown>
+            </fingering>
+        </note>
+
+
+       <note name="G7">
+            <fingering name="Alt1" comment="">
+                <keysDown>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>G#</key>
+                    <key>T1</key>
+                    <key>E</key>
+                </keysDown>
+            </fingering>
+            <fingering name="Alt2" comment="B-Foot">
+                <keysDown>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>G#</key>
+                    <key>T1</key>
+                    <key>E</key>
+                    <key>DbFoot</key>
+                    <key>CFoot</key>
+                    <key>BFoot</key>
+                </keysDown>
+            </fingering>
+            <fingering name="Alt3" comment="B-Foot">
+                <keysDown>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>G#</key>
+                    <key>E</key>
+                    <key>D</key>
+                    <key>DbFoot</key>
+                    <key>CFoot</key>
+                    <key>BFoot</key>
+                </keysDown>
+            </fingering>
+        </note>
+
+       <note name="G#7 / Ab7">
+            <fingering name="Alt1" comment="B-Foot">
+                <keysDown>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>G#</key>
+                    <key>T1</key>
+                    <key>E</key>
+                    <key>D</key>
+                    <key>DbFoot</key>
+                    <key>CFoot</key>
+                    <key>BFoot</key>
+                </keysDown>
+            </fingering>
+        </note>
+
+       <note name="A#7 / Bb7">
+            <fingering name="Alt1" comment="Very airy. Very Difficult">
+                <keysDown>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>G#</key>
+                    <key>T1</key>
+                    <key>E</key>
+                    <key>D</key>
+                    <key>DbFoot</key>
+                    <key>CFoot</key>
+                    <key>BFoot</key>
+                </keysDown>
+                <keysHalfDown>
+                    <key>F</key>
+                </keysHalfDown>
+            </fingering>
+        </note>
+
+       <note name="C8">
+            <fingering name="Alt1" comment="Very Difficult">
+                <keysDown>
+                    <key>C</key>
+                    <key>G</key>
+                    <key>G#</key>
+                    <key>F</key>
+                    <key>T2</key>
+                    <key>EbFoot</key>
+                </keysDown>
+            </fingering>
+        </note>
+
+
+
+
+	</set>
+	
+	<set name="Trills">
+	
+        <!-- First octacve -->	   
+        <note name="B3-C4">
+            <fingering name="Standard" comment="Impractical">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>F</key>
+                    <key>E</key>
+                    <key>D</key>
+                    <key>DbFoot</key>
+                    <key>CFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>BFoot</key>
+                </keysTrillDown>
+            </fingering>
+        </note>
+        <note name="B3-C#4 / Cb4-Db4">
+            <fingering name="Standard" comment="Impractical">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>F</key>
+                    <key>E</key>
+                    <key>D</key>
+                    <key>DbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>CFoot</key>
+                    <key>BFoot</key>
+                </keysTrillDown>
+            </fingering>
+        </note>
+        <note name="B#3-C#4 / C4-Db4">
+            <fingering name="Standard" comment="Awkward">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>F</key>
+                    <key>E</key>
+                    <key>D</key>
+                    <key>DbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>CFoot</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Absurd" comment="Requires closed C# cup (e.g. with knee)">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>F</key>
+                    <key>E</key>
+                    <key>D</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>DbFoot</key>
+                    <key>CFoot</key>
+                </keysTrillDown>
+            </fingering>
+        </note>
+        <note name="C4-D4">
+            <fingering name="Standard" comment="Basic">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>F</key>
+                    <key>E</key>
+                    <key>D</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>DbFoot</key>
+                    <key>CFoot</key>
+                </keysTrillDown>
+            </fingering>
+        </note>
+        <note name="C#4-D4">
+            <fingering name="Standard" comment="Basic">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>F</key>
+                    <key>E</key>
+                    <key>D</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>DbFoot</key>
+                </keysTrillDown>
+            </fingering>
+        </note>
+        <note name="C#4-D#4 / Db4-Eb4">
+            <fingering name="Standard" comment="Awkward">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>F</key>
+                    <key>E</key>
+                    <key>D</key>
+                    <key>DbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>EbFoot</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Kicker" comment="Requires kicker. Pull back with RH Thumb and trill the tone hole.">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>F</key>
+                    <key>E</key>
+                    <key>DbFoot</key>
+                </keysDown>
+                <ringsDown>
+                    <key>D</key>
+                </ringsDown>
+                <keysTrillDown>
+                    <key>D</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Absurd" comment="Close C# cup, e.g. with knee">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>F</key>
+                    <key>E</key>
+                    <key>D</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>EbFoot</key>
+                </keysTrillDown>
+            </fingering>
+        </note>
+        <note name="D4-Eb4">
+            <fingering name="Standard" comment="Basic">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>F</key>
+                    <key>E</key>
+                    <key>D</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>EbFoot</key>
+                </keysTrillDown>
+            </fingering>
+        </note>
+        <note name="D4-E4">
+            <fingering name="Standard" comment="Basic">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>F</key>
+                    <key>E</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>D</key>
+                </keysTrillDown>
+            </fingering>
+        </note>
+        <note name="D#4-E4 / Eb4-Fb4">
+            <fingering name="Standard" comment="Basic">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>F</key>
+                    <key>E</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>D</key>
+                </keysTrillDown>
+            </fingering>
+        </note>
+        <note name="D#4-E#4 / Eb4-F4">
+            <fingering name="Standard" comment="Basic">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>F</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>E</key>
+                    <key>D</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Alt1" comment="">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>F</key>
+                    <key>D</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>E</key>
+                </keysTrillDown>
+            </fingering>
+        </note>
+        <note name="E4-F4">
+            <fingering name="Standard" comment="Basic">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>F</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>E</key>
+                </keysTrillDown>
+            </fingering>
+        </note>
+        <note name="E4-F#4 / Fb4-Gb4">
+            <fingering name="Standard" comment="Basic">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>E</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>F</key>
+                </keysTrillDown>
+            </fingering>
+        </note>
+        <note name="E#4-F#4 / F4-Gb4">
+            <fingering name="Standard" comment="Basic">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>D</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>F</key>
+                </keysTrillDown>
+            </fingering>
+        </note>
+        <note name="F4-G4">
+            <fingering name="Standard" comment="Basic">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>F</key>
+                </keysTrillDown>
+            </fingering>
+        </note>
+        <note name="F#4-G4">
+            <fingering name="Standard" comment="Basic">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>D</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Alt1" comment="Fast slur from E">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>D</key>
+                </keysTrillDown>
+            </fingering>
+        </note>
+        <note name="F#4-G#4 / Gb4-Ab4">
+            <fingering name="Standard" comment="Basic">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>D</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>G#</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Alt1" comment="Fast slur from E">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>E</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>G#</key>
+                </keysTrillDown>
+            </fingering>
+        </note>
+        <note name="G4-Ab4">
+            <fingering name="Standard" comment="Basic">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>G#</key>
+                </keysTrillDown>
+            </fingering>
+        </note>        
+        <note name="G4-A4">
+            <fingering name="Standard" comment="Basic">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>G</key>
+                </keysTrillDown>
+            </fingering>
+        </note>        
+        <note name="G#4-A4">
+            <fingering name="Standard" comment="Basic">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G#</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>G</key>
+                </keysTrillDown>
+            </fingering>
+        </note>      
+        <note name="G#4-A#4 / Ab4-Bb4">
+            <fingering name="Standard" comment="Basic">
+                <keysDown>
+                    <key>C</key>
+                    <key>Bb</key>
+                    <key>G#</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>A</key>
+                    <key>G</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Standard-Bb" comment="Without Bb Thumb">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>G#</key>
+                    <key>F</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>A</key>
+                    <key>G</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Standard-BbF" comment="Without Bb Thumb or F">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>G#</key>
+                    <key>BbTrill</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>A</key>
+                    <key>G</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Alt" comment="Flat Interval">
+                <keysDown>
+                    <key>C</key>
+                    <key>Bb</key>
+                    <key>G</key>
+                    <key>G#</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>A</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Alt-Bb" comment="Flat Interval. Without Bb Thumb">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>G</key>
+                    <key>G#</key>
+                    <key>F</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>A</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Alt-BbF" comment="Flat Interval. Without Bb Thumb or F">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>G</key>
+                    <key>G#</key>
+                    <key>BbTrill</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>A</key>
+                </keysTrillDown>
+            </fingering>
+        </note>
+        <note name="A4-Bb4">
+            <fingering name="Standard" comment="Basic">
+                <keysDown>
+                    <key>C</key>
+                    <key>Bb</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>A</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Standard-Bb" comment="Without Bb Thumb">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>F</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>A</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Standard-BbF" comment="Without Bb Thumb or F">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>BbTrill</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>A</key>
+                </keysTrillDown>
+            </fingering>
+        </note>        
+        <note name="A4-B4">
+            <fingering name="Standard" comment="Basic">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>A</key>
+                </keysTrillDown>
+            </fingering>
+        </note>
+        <note name="A#4-B4 / Bb4-Cb5">
+            <fingering name="Standard" comment="Basic">
+               <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>F</key>
+                </keysTrillDown>                
+            </fingering>
+            <fingering name="Bb Trill" comment="Basic, Bb Trill">
+               <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>BbTrill</key>
+                </keysTrillDown>                
+            </fingering>
+        </note>
+        <note name="A#4-B#4 / Bb4-C5">
+            <fingering name="Standard" comment="Basic">
+                <keysDown>
+                    <key>C</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>Bb</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Standard-Bb" comment="Without Bb Thumb">
+                <keysDown>
+                    <key>C</key>
+                    <key>F</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>B</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Standard-BbF" comment="Without Bb Thumb or F">
+                <keysDown>
+                    <key>C</key>
+                    <key>BbTrill</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>B</key>
+                </keysTrillDown>
+            </fingering>
+        </note>        
+        <note name="B4-C5">
+            <fingering name="Standard" comment="Basic">
+                <keysDown>
+                    <key>C</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>B</key>
+                </keysTrillDown>
+            </fingering>
+        </note>        
+        <note name="B4-C#5 / Cb5-Db5">
+            <fingering name="Standard" comment="Basic">
+                <keysDown>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>C</key>
+                    <key>B</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="C#Trill" comment="Basic with C# Trill Key">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>C#Trill</key>
+                </keysTrillDown>
+            </fingering>
+        </note>        
+        <note name="B#4-C#5 / C5-Db5">
+            <fingering name="Standard" comment="Basic">
+                <keysDown>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>C</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="C#Trill" comment="Basic with C# Trill Key">
+                <keysDown>
+                    <key>C</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>C#Trill</key>
+                </keysTrillDown>
+            </fingering>
+        </note>        
+        <note name="C5-D5">
+            <fingering name="Standard" comment="Basic">
+                <keysDown>
+                    <key>C</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>T1</key>
+                </keysTrillDown>
+            </fingering>
+        </note>        
+        <note name="C#5-D5">
+            <fingering name="Standard" comment="Basic">
+                <keysDown>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>T1</key>
+                </keysTrillDown>
+            </fingering>
+        </note>        
+        <note name="C#5-D#5 / Db5-Eb5">
+            <fingering name="Standard" comment="Basic">
+                <keysDown>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>T2</key>
+                </keysTrillDown>
+            </fingering>
+        </note>    
+
+    <!-- Second Octave -->
+            <note name="D5-Eb5">
+            <fingering name="Standard" comment="Basic">
+                <keysDown>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>F</key>
+                    <key>E</key>
+                    <key>D</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>EbFoot</key>
+                </keysTrillDown>
+            </fingering>
+        </note>
+        <note name="D5-E5">
+            <fingering name="Standard" comment="Basic. Can slightly close LH1 to improve tone">
+                <keysDown>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>F</key>
+                    <key>E</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>D</key>
+                </keysTrillDown>
+            </fingering>
+        </note>
+        <note name="D#5-E5 / Eb5-Fb5">
+            <fingering name="Standard" comment="Basic. Can slightly close LH1 to improve tone.">
+                <keysDown>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>F</key>
+                    <key>E</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>D</key>
+                </keysTrillDown>
+            </fingering>
+        </note>
+        <note name="D#5-E#5 / Eb5-F5">
+            <fingering name="Standard" comment="Basic">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>F</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>E</key>
+                    <key>D</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Alt1" comment="">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>F</key>
+                    <key>D</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>E</key>
+                </keysTrillDown>
+            </fingering>
+        </note>
+        <note name="E5-F5">
+            <fingering name="Standard" comment="Basic">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>F</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>E</key>
+                </keysTrillDown>
+            </fingering>
+        </note>
+        <note name="E5-F#5 / Fb5-Gb5">
+            <fingering name="Standard" comment="Basic">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>E</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>F</key>
+                </keysTrillDown>
+            </fingering>
+        </note>
+        <note name="E#5-F#5 / F5-Gb5">
+            <fingering name="Standard" comment="Basic">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>D</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>F</key>
+                </keysTrillDown>
+            </fingering>
+        </note>
+        <note name="F5-G5">
+            <fingering name="Standard" comment="Basic">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>F</key>
+                </keysTrillDown>
+            </fingering>
+        </note>
+        <note name="F#5-G5">
+            <fingering name="Standard" comment="Basic">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>D</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Alt1" comment="Fast slur from E">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>D</key>
+                </keysTrillDown>
+            </fingering>
+        </note>
+        <note name="F#5-G#5 / Gb5-Ab5">
+            <fingering name="Standard" comment="Basic">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>D</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>G#</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Alt1" comment="Fast slur from E">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>E</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>G#</key>
+                </keysTrillDown>
+            </fingering>
+        </note>
+        <note name="G5-Ab5">
+            <fingering name="Standard" comment="Basic">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>G#</key>
+                </keysTrillDown>
+            </fingering>
+        </note>        
+        <note name="G5-A5">
+            <fingering name="Standard" comment="Basic">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>G</key>
+                </keysTrillDown>
+            </fingering>
+        </note>        
+        <note name="G#5-A5">
+            <fingering name="Standard" comment="Basic">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G#</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>G</key>
+                </keysTrillDown>
+            </fingering>
+        </note>      
+        <note name="G#5-A#5 / Ab5-Bb5">
+            <fingering name="Standard" comment="Basic">
+                <keysDown>
+                    <key>C</key>
+                    <key>Bb</key>
+                    <key>G#</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>A</key>
+                    <key>G</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Standard-Bb" comment="Without Bb Thumb">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>G#</key>
+                    <key>F</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>A</key>
+                    <key>G</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Standard-BbF" comment="Without Bb Thumb or F">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>G#</key>
+                    <key>BbTrill</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>A</key>
+                    <key>G</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Alt" comment="Flat Interval">
+                <keysDown>
+                    <key>C</key>
+                    <key>Bb</key>
+                    <key>G</key>
+                    <key>G#</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>A</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Alt-Bb" comment="Flat Interval. Without Bb Thumb">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>G</key>
+                    <key>G#</key>
+                    <key>F</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>A</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Alt-BbF" comment="Flat Interval. Without Bb Thumb or F">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>G</key>
+                    <key>G#</key>
+                    <key>BbTrill</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>A</key>
+                </keysTrillDown>
+            </fingering>
+        </note>
+        <note name="A5-Bb5">
+            <fingering name="Standard" comment="Basic">
+                <keysDown>
+                    <key>C</key>
+                    <key>Bb</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>A</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Standard-Bb" comment="Without Bb Thumb">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>F</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>A</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Standard-BbF" comment="Without Bb Thumb or F">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>BbTrill</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>A</key>
+                </keysTrillDown>
+            </fingering>
+        </note>        
+        <note name="A5-B5">
+            <fingering name="Standard" comment="Basic">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>A</key>
+                </keysTrillDown>
+            </fingering>
+        </note>
+        <note name="A#5-B5 / Bb5-Cb6">
+            <fingering name="Standard" comment="Basic">
+               <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>F</key>
+                </keysTrillDown>                
+            </fingering>
+            <fingering name="Bb Trill" comment="Basic, Bb Trill">
+               <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>BbTrill</key>
+                </keysTrillDown>                
+            </fingering>
+            <fingering name="Harmonic" comment="Harmonic Eb4-E4">
+               <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>G</key>
+                    <key>F</key>
+                    <key>E</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>D</key>
+                </keysTrillDown>                
+            </fingering>
+        </note>
+        <note name="A#5-B#5 / Bb5-C6">
+            <fingering name="Standard" comment="Basic">
+                <keysDown>
+                    <key>C</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>Bb</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Standard-Bb" comment="Without Bb Thumb">
+                <keysDown>
+                    <key>C</key>
+                    <key>F</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>B</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Standard-BbF" comment="Without Bb Thumb or F">
+                <keysDown>
+                    <key>C</key>
+                    <key>BbTrill</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>B</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Alt1" comment="Sharp C">
+                <keysDown>
+                    <key>C</key>
+                    <key>Bb</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>T1</key>
+                </keysTrillDown>
+            </fingering>
+        </note>        
+        <note name="B5-C6">
+            <fingering name="Standard" comment="Basic">
+                <keysDown>
+                    <key>C</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>B</key>
+                </keysTrillDown>
+            </fingering>
+        </note>        
+        <note name="B5-C#6 / Cb6-Db6">
+            <fingering name="Standard" comment="Basic">
+                <keysDown>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>C</key>
+                    <key>B</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="C#Trill" comment="Basic with C# Trill Key">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>C#Trill</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Alt1" comment="Sharp C#">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>T1</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Alt2" comment="Sharp C#">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>T1</key>
+                </keysTrillDown>
+            </fingering>
+        </note>        
+        <note name="B#5-C#6 / C6-Db6">
+            <fingering name="Standard" comment="Basic">
+                <keysDown>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>C</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="C#Trill" comment="Basic with C# Trill Key">
+                <keysDown>
+                    <key>C</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>C#Trill</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Alt1" comment="Sharp">
+                <keysDown>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>E</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>F</key>
+                </keysTrillDown>
+            </fingering>
+        </note>        
+        <note name="C6-D6">
+            <fingering name="Standard" comment="Basic">
+                <keysDown>
+                    <key>C</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>T2</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Alt1" comment="Flat D">
+                <keysDown>
+                    <key>C</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>T1</key>
+                </keysTrillDown>
+            </fingering>
+        </note>        
+        <note name="C#6-D6">
+            <fingering name="Standard" comment="Basic">
+                <keysDown>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>T1</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Harmonic" comment="Sharp C# : Harmonic (F#4-G4)">
+                <keysDown>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>E</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Alt" comment="Less sharp than harmonic fingering">
+                <keysDown>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>D</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>E</key>
+                </keysTrillDown>
+            </fingering>
+        </note>        
+        <note name="C#6-D#6 / Db6-Eb6">
+            <fingering name="Standard" comment="Basic">
+                <keysDown>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>T1</key>
+                    <key>T2</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Alt1" comment="Flat">
+                <keysDown>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>G#</key>
+                    <key>F</key>
+                    <key>E</key>
+                    <key>D</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>B</key>
+                </keysTrillDown>
+            </fingering>
+        </note>
+        
+    <!-- Third Octave -->
+        <note name="D6-Eb6">
+            <fingering name="Standard" comment="Basic">
+                <keysDown>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>T2</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Alt1" comment="Sharp Eb">
+                <keysDown>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>T1</key>
+                    <key>T2</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Alt2" comment="Flat Eb">
+                <keysDown>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>G#</key>
+                </keysTrillDown>
+            </fingering>
+        </note>
+        <note name="D6-E6">
+            <fingering name="Standard" comment="Basic">
+                <keysDown>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>G</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Harmonic" comment="Flat E; Harmonic (G4-A4)">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>G</key>
+                </keysTrillDown>
+            </fingering>
+        </note>
+        <note name="D#6-E6 / Eb6-Fb6">
+            <fingering name="Standard" comment="Basic">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G#</key>
+                    <key>F</key>
+                    <key>E</key>
+                    <key>D</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>G</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Harmonic" comment="Flat E; Harmonic (D#4-E4)">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>G#</key>
+                    <key>F</key>
+                    <key>E</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>D</key>
+                </keysTrillDown>
+            </fingering>
+        </note>
+        <note name="D#6-E#6 / Eb6-F6">
+            <fingering name="Standard" comment="Basic">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>G#</key>
+                    <key>F</key>
+                    <key>E</key>
+                    <key>D</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>A</key>
+                    <key>G</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Alt1" comment="Flat F">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>G</key>
+                    <key>G#</key>
+                    <key>F</key>
+                    <key>E</key>
+                    <key>D</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>A</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Harmonic" comment="Flat; Harmonic (Ab4-Bb4)">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>G#</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>A</key>
+                    <key>G</key>
+                </keysTrillDown>
+            </fingering>
+        </note>
+        <note name="E6-F6">
+            <fingering name="Standard" comment="Basic">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>F</key>
+                    <key>E</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>A</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Harmonic" comment="Flat; Harmonic (A4-Bb4)">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>A</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Alt1" comment="Sharp E">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>G</key>
+                    <key>F</key>
+                    <key>D</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>E</key>
+                </keysTrillDown>
+            </fingering>
+        </note>
+        <note name="E6-F#6 / Fb6-Gb6">
+            <fingering name="Standard" comment="Basic; Flat F#">
+                <keysDown>
+                    <key>C</key>
+                    <key>A</key>
+                    <key>F</key>
+                    <key>E</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>B</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Alt1" comment="Flat">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>T2</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>A</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Harmonic" comment="Flat; Harmoic (A4-B4)">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>A</key>
+                </keysTrillDown>
+            </fingering>
+        </note>
+        <note name="E#6-F#6 / F6-Gb6">
+            <fingering name="Standard" comment="Basic">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>G</key>
+                    <key>D</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>F</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Alt1" comment="Sharp">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>G</key>
+                    <key>D</key>
+                    <key>DbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>F</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Alt2" comment="">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>G</key>
+                    <key>E</key>
+                    <key>D</key>
+                    <key>DbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>F</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Alt3" comment="Sharp Gb">
+                <keysDown>
+                    <key>C</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>F</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>B</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Harmonic" comment="Flat; Harmonic (A#4-B4)">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>BbTrill</key>
+                </keysTrillDown>
+            </fingering>
+        </note>
+        <note name="F6-G6">
+            <fingering name="Standard" comment="Basic; Flat G">
+                <keysDown>
+                    <key>C</key>
+                    <key>G</key>
+                    <key>F</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>B</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="TwoHand" comment="In-Tune G">
+                <keysDown>
+                    <key>C</key>
+                    <key>G</key>
+                    <key>F#</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>B</key>
+                    <key>F</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="OpenHole" comment="Flat G; Harmonic (F4-G4)">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>G</key>
+                    <key>F</key>
+                    <key>DbFoot</key>
+                </keysDown>
+                <ringsDown>
+                    <key>A</key>
+                </ringsDown>
+                <keysTrillDown>
+                    <key>F</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Harmonic" comment="Flat; Harmonic (Bb4-C5)">
+                <keysDown>
+                    <key>C</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>B</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="BestBFoot" comment="In tune. Best on B-Foot flutes">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>DbFoot</key>
+                    <key>CFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>F</key>
+                </keysTrillDown>
+            </fingering>
+        </note>
+        <note name="F#6-G6">
+            <fingering name="Standard" comment="Basic; Flat G">
+                <keysDown>
+                    <key>C</key>
+                    <key>G</key>
+                    <key>D</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>B</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Alt1" comment="Flat">
+                <keysDown>
+                    <key>C</key>
+                    <key>G</key>
+                    <key>E</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>B</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Alt2" comment="Sharp F#">
+                <keysDown>
+                    <key>C</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>DbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>F</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Harmonic" comment="Flat; Harmonic (B4-C5)">
+                <keysDown>
+                    <key>C</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>B</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Picc" comment="Flat interval. Good for Piccolo">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>G</key>
+                    <key>E</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>T1</key>
+                    <key>D</key>
+                </keysTrillDown>
+            </fingering>
+        </note>
+        <note name="F#6-G#6 / Gb6-Ab6">
+            <fingering name="Standard" comment="Basic; Flat G#">
+                <keysDown>
+                    <key>G</key>
+                    <key>D</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>B</key>
+                    <key>C</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Alt1" comment="Flat">
+                <keysDown>
+                    <key>G</key>
+                    <key>E</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>B</key>
+                    <key>C</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="C#Trill" comment="Basic with C# Trill Key">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>G</key>
+                    <key>D</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>C#Trill</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Alt2" comment="Alternate LH G# with RH 3">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>D</key>
+                </keysTrillDown>
+                <keysTrillUp>
+                    <key>G#</key>
+                </keysTrillUp>
+            </fingering>
+            <fingering name="Harmonic" comment="Flat; Harmonic (B4-C#5)">
+                <keysDown>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>B</key>
+                    <key>C</key>
+                </keysTrillDown>
+            </fingering>
+        </note> 
+        <note name="G6-Ab6">
+            <fingering name="Standard" comment="Basic">
+                <keysDown>
+                    <key>C</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>T1</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="C#Trill" comment="Basic with C# Trill Key">
+                <keysDown>
+                    <key>C</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>C#Trill</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Alt1" comment="Flat Ab">
+                <keysDown>
+                    <key>C</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>G#</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Harmonic" comment="Flat; (C5-Db5)">
+                <keysDown>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>C</key>
+                </keysTrillDown>
+            </fingering>
+        </note>
+        <note name="G6-A6">
+            <fingering name="Standard" comment="Basic; Flat A">
+                <keysDown>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>E</key>
+                    <key>D</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>G</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Harmonic1" comment="Flat; Harmonic (G4-A4)">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>G</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="C#Trill" comment="Basic for flutes with C# Trill">
+                <keysDown>
+                    <key>C</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>C#Trill</key>
+                    <key>T1</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Harmonic2" comment="Sharp G, Flat A; Harmonic (D6-E6)">
+                <keysDown>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>G</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Alt1" comment="Sharp A, bad tone">
+                <keysDown>
+                    <key>C</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>F</key>
+                    <key>T1</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Alt2" comment="Flat">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>F</key>
+                    <key>D</key>
+                    <key>E</key>
+                    <key>EbFoot</key>
+                    <key>DbFoot</key>
+                    <key>CFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>G</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Alt3" comment="Sharp. Good response for ff. A little awkward">
+                <keysDown>
+                    <key>C</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>G#</key>
+                    <key>F</key>
+                    <key>T1</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Alt4" comment="Awkward but in tune">
+                <keysDown>
+                    <key>C</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>DbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>G#</key>
+                    <key>F</key>
+                    <key>T1</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Alt5" comment="In tune, good tone">
+                <keysDown>
+                    <key>C</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>G#</key>
+                    <key>T1</key>
+                    <key>T2</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Alt6" comment="">
+                <keysDown>
+                    <key>A</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>C</key>
+                    <key>G</key>
+                </keysTrillDown>
+            </fingering>
+        </note>        
+        <note name="G#6-A6">
+            <fingering name="Standard" comment="Basic">
+                <keysDown>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>G#</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>T1</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Alt1" comment="Sharp A">
+                <keysDown>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>G#</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>T2</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Alt2" comment="Flat A">
+                <keysDown>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G#</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>G</key>
+                </keysTrillDown>
+            </fingering>
+        </note>
+        <note name="G#6-A#6 / Ab6-Bb6">
+            <fingering name="Standard" comment="Basic, flat Bb">
+                <keysDown>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>G#</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>T1</key>
+                    <key>T2</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="C#Trill" comment="Basic, with C# Trill key">
+                <keysDown>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>G#</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>T1</key>
+                    <key>T2</key>
+                    <key>C#Trill</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Alt1" comment="Good tone. In tune">
+                <keysDown>
+                    <key>B</key>
+                    <key>G#</key>
+                    <key>F</key>
+                    <key>E</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>A</key>
+                    <key>G</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Alt2" comment="Flat">
+                <keysDown>
+                    <key>B</key>
+                    <key>G#</key>
+                    <key>E</key>
+                    <key>D</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>A</key>
+                    <key>G</key>
+                </keysTrillDown>
+            </fingering>
+        </note>
+        <note name="A6-Bb6">
+            <fingering name="Standard" comment="Basic, flat Bb">
+                <keysDown>
+                    <key>B</key>
+                    <key>F</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>A</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Picc" comment="Interval more in tune. Good for Piccolo">
+                <keysDown>
+                    <key>B</key>
+                    <key>F</key>
+                    <key>D</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>A</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Alt1" comment="Flat Bb">
+                <keysDown>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>F</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>T1</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Alt2" comment="Better Bb">
+                <keysDown>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>F</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>T1</key>
+                    <key>T2</key>
+                </keysTrillDown>
+            </fingering>
+        </note>
+        <note name="A6-B6">
+            <fingering name="Standard" comment="Basic, flat B">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>A</key>
+                    <key>G</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>F</key>
+                    <key>D</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="OpenHole" comment="">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>G</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <ringsDown>
+                    <key>A</key>
+                </ringsDown>
+                <keysTrillDown>
+                    <key>F</key>
+                    <key>D</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Alt1" comment="Flat B">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>G</key>
+                    <key>D</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>A</key>
+                    <key>F</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Alt2BFoot" comment="A little awkward">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>G</key>
+                    <key>D</key>
+                    <key>EbFoot</key>
+                    <key>DbFoot</key>
+                    <key>CFoot</key>
+                    <key>BFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>A</key>
+                    <key>F</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Alt3" comment="Awkward but more in tune B">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>G</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>A</key>
+                    <key>F</key>
+                    <key>D</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Harmonic" comment="Flat B; Harmonic (A4-B4)">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>G#</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>A</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="BFoot" comment="Good repsonse">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>E</key>
+                    <key>D</key>
+                    <key>DbFoot</key>
+                    <key>CFoot</key>
+                    <key>BFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>A</key>
+                    <key>F</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Gizmo" comment="Good repsonse">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>E</key>
+                    <key>D</key>
+                    <key>Gizmo</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>A</key>
+                    <key>F</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Alt4" comment="Sharp A; Slightly Flat B">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>G</key>
+                    <key>T1</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>A</key>
+                    <key>F</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Alt5" comment="Flat B. Vent RH2 as needed"> <!-- TODO: Fix this one -->
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>E</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>A</key>
+                    <key>F</key>
+                </keysTrillDown>
+            </fingering>
+        </note>
+        <note name="A#6-B6 / Bb6-Cb7">
+            <fingering name="Standard" comment="Basic, in tune">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>G</key>
+                    <key>T2</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>F</key>
+                    <key>T1</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Alt1" comment="Flat B">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>G</key>
+                    <key>T1</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>F</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Alt2" comment="Awkward">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>G</key>
+                    <key>D</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>F</key>
+                    <key>T1</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Alt3" comment="">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>G</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>F</key>
+                    <key>D</key>
+                </keysTrillDown>
+            </fingering>
+        </note>
+        <note name="A#6-B#6 / Bb6-C7">
+            <fingering name="Standard" comment="Basic, Flat C">
+                <keysDown>
+                    <key>C</key>
+                    <key>G</key>
+                    <key>D</key>
+                    <key>DbFoot</key>
+                    <key>CFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>B</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Alt1" comment="Flat C">
+                <keysDown>
+                    <key>C</key>
+                    <key>G</key>
+                    <key>D</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>B</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Alt2" comment="Better C">
+                <keysDown>
+                    <key>C</key>
+                    <key>G</key>
+                    <key>E</key>
+                    <key>T2</key>
+                    <key>D</key>
+                    <key>DbFoot</key>
+                    <key>CFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>B</key>
+                    <key>A</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Alt3" comment="Flat C">
+                <keysDown>
+                    <key>C</key>
+                    <key>G</key>
+                    <key>T2</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>B</key>
+                    <key>F</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Alt4" comment="Flat Bb, excellent C">
+                <keysDown>
+                    <key>C</key>
+                    <key>B</key>
+                    <key>G#</key>
+                    <key>F</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>A</key>
+                    <key>G</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="Alt5" comment="Flat C, excellent response">
+                <keysDown>
+                    <key>C</key>
+                    <key>G</key>
+                    <key>E</key>
+                    <key>D</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>B</key>
+                </keysTrillDown>
+            </fingering>
+        </note>
+        <note name="B6-C7">
+            <fingering name="Standard" comment="Basic, Flat C">
+                <keysDown>
+                    <key>C</key>
+                    <key>G</key>
+                    <key>T2</key>
+                    <key>EbFoot</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>B</key>
+                </keysTrillDown>
+            </fingering>
+        </note>
+        <note name="B6-C#7 / Cb7-Db7">
+            <fingering name="B-Foot" comment="Basic, B-Foot">
+                <keysDown>
+                    <key>G</key>
+                    <key>T2</key>
+                    <key>BFoot</key>
+                    <key>Gizmo</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>C</key>
+                    <key>B</key>
+                </keysTrillDown>
+            </fingering>
+            <fingering name="C-Foot" comment="Basic, C-Foot">
+                <keysDown>
+                    <key>G</key>
+                    <key>T2</key>
+                </keysDown>
+                <keysTrillDown>
+                    <key>C</key>
+                    <key>B</key>
+                </keysTrillDown>
+            </fingering>
+        </note>
+    </set>
+    
+</instrument>

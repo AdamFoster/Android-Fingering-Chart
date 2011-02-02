@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
+
+	<TextView 
+	   android:text="Instrument: C4" android:id="@+id/instrument_name" 
+	   android:layout_width="fill_parent" 
+	   android:layout_height="wrap_content" 
+	   android:gravity="center_horizontal" />
+	<TableLayout
+	  xmlns:android="http://schemas.android.com/apk/res/android"
+	  android:id="@+id/table"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+       
+      android:stretchColumns="1"
+      android:layout_alignParentBottom="true">
+      <TableRow>
+	    <Spinner 
+	        android:id="@+id/spin_type" 
+	        android:layout_width="wrap_content" 
+	        android:layout_height="wrap_content" 
+	        android:padding="3dip"
+	        android:prompt="@string/type"
+	        />
+        <Spinner 
+            android:id="@+id/spin_note" 
+            android:prompt="@string/note"
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:padding="3dip"
+            android:layout_gravity="center_horizontal"
+            />
+        <Spinner 
+            android:id="@+id/spin_fingering" 
+            android:prompt="@string/fingering"
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content"
+            android:padding="3dip"
+            android:layout_gravity="right" 
+            />
+	  </TableRow>
+    </TableLayout>  
+	<net.adamfoster.android.finger.FingerSurface 
+	  android:id="@+id/SurfaceView01" 
+	  android:layout_width="fill_parent" 
+	  android:layout_height="fill_parent" 
+	  android:layout_below="@id/instrument_name"
+      android:layout_above="@id/table"
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentRight="true"
+      />
+</RelativeLayout>

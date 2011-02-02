@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ins:instrument xmlns:ins="http://www.adamfoster.net/instrument" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://www.adamfoster.net/instrument instrument.xsd ">
+  <ins:baseKeys>
+    <ins:baseKey/>
+  </ins:baseKeys>
+  <ins:set>
+    <ins:note>
+      <ins:fingering/>
+    </ins:note>
+  </ins:set>
+</ins:instrument>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title">Fingering Chart</string>
+    <string name="app_name">Fingering Chart</string>
+    <string name="button_fingering">Fingering</string>
+    <string name="button_trills">Trills</string>
+    <string name="instrument_flute">Flute</string>
+    <string name="instrument_clarinet">Clarinet</string>
+    
+    <string name="type">Type</string>
+    <string name="fingering">Fingering</string>
+    <string name="note">Note</string>
+</resources>

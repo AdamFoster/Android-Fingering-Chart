@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://www.adamfoster.net/instrument" elementFormDefault="qualified" 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ins="http://www.adamfoster.net/instrument"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <xsd:element name="key" type="xsd:string" />
+    <xsd:element name="instrument" type="ins:instrument" />
+
+    <xsd:complexType name="keys">
+    	<xsd:sequence>
+    		<xsd:element ref="ins:key" maxOccurs="unbounded" />
+    	</xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:complexType name="baseKey">
+        <xsd:attribute name="name" type="xsd:string" />
+        <xsd:attribute name="positionx" type="xsd:string" />
+        <xsd:attribute name="positiony" type="xsd:string" />
+        <xsd:attribute name="type" type="xsd:string" />
+        <xsd:attribute name="radius" type="xsd:string" use="optional" />
+        <xsd:attribute name="width" type="xsd:string" use="optional" />
+        <xsd:attribute name="height" type="xsd:string" use="optional" />
+    </xsd:complexType>
+    
+    <xsd:complexType name="baseKeys">
+        <xsd:sequence>
+            <xsd:element name="baseKey" type="ins:baseKey" maxOccurs="unbounded" />
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:complexType name="fingering">
+        <xsd:sequence>
+            <xsd:element name="keysDown" type="ins:keys" minOccurs="0" maxOccurs="1" />
+            <xsd:element name="ringsDown" type="ins:keys" minOccurs="0" maxOccurs="1" />
+            <xsd:element name="keysHalfDown" type="ins:keys" minOccurs="0" maxOccurs="1" />
+            <xsd:element name="keysTrillDown" type="ins:keys" minOccurs="0" maxOccurs="1" />
+            <xsd:element name="keysHalfTrillDown" type="ins:keys" minOccurs="0" maxOccurs="1" />
+            <xsd:element name="ringsTrillDown" type="ins:keys" minOccurs="0" maxOccurs="1" />
+            <xsd:element name="keysTrillUp" type="ins:keys" minOccurs="0" maxOccurs="1" />
+            <xsd:element name="keysHalfTrillUp" type="ins:keys" minOccurs="0" maxOccurs="1" />
+            <xsd:element name="ringsTrillUp" type="ins:keys" minOccurs="0" maxOccurs="1" />
+        </xsd:sequence>
+        <xsd:attribute name="name" type="xsd:string" />
+        <xsd:attribute name="comment" type="xsd:string" />
+    </xsd:complexType>
+    
+    <xsd:complexType name="note">
+        <xsd:sequence>    
+            <xsd:element name="fingering" type="ins:fingering" minOccurs="1" maxOccurs="unbounded" />
+        </xsd:sequence>
+        <xsd:attribute name="name" type="xsd:string" />
+    </xsd:complexType>
+    
+    <xsd:complexType name="set">
+        <xsd:sequence>
+            <xsd:element name="note" type="ins:note" minOccurs="1" maxOccurs="unbounded" />
+        </xsd:sequence>
+        <xsd:attribute name="name" type="xsd:string" />
+    </xsd:complexType>
+    
+    <xsd:complexType name="instrument">
+        <xsd:sequence>
+            <xsd:element name="baseKeys" type="ins:baseKeys" minOccurs="1" maxOccurs="1" />
+            <xsd:element name="set" type="ins:set" minOccurs="1" maxOccurs="unbounded" />
+        </xsd:sequence>
+        <xsd:attribute name="name" type="xsd:string" />
+        <xsd:attribute name="image" type="xsd:string" />
+    </xsd:complexType>
+    
+</xsd:schema>
