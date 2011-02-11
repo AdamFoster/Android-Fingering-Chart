@@ -5,7 +5,7 @@
   android:layout_height="fill_parent">
 
 	<TextView 
-	   android:text="Instrument: C4" android:id="@+id/instrument_name" 
+	   android:text="Instrument: XX" android:id="@+id/chart_title" 
 	   android:layout_width="fill_parent" 
 	   android:layout_height="wrap_content" 
 	   android:gravity="center_horizontal" />
@@ -47,7 +47,7 @@
 	  android:id="@+id/SurfaceView01" 
 	  android:layout_width="fill_parent" 
 	  android:layout_height="fill_parent" 
-	  android:layout_below="@id/instrument_name"
+	  android:layout_below="@id/chart_title"
       android:layout_above="@id/table"
       android:layout_alignParentLeft="true"
       android:layout_alignParentRight="true"

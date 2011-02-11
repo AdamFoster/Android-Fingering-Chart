@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<instrument name="Flute" image="@drawable/musiclove" 
+<instrument 
     xmlns="http://www.adamfoster.net/instrument" 
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
     xsi:schemaLocation="http://www.adamfoster.net/instrument instrument.xsd"
-    xsi:noNamespaceSchemaLocation="instrument.xsd" >
+    xsi:noNamespaceSchemaLocation="instrument.xsd" 
+    name="Flute" image="@drawable/musiclove" >
     
     <baseKeys>
         <baseKey name="C" positionx="0.5" positiony="0.3" type="circle" radius="7.5" />

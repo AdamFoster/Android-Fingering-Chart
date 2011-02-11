@@ -14,12 +14,15 @@ import android.app.Activity;
 import android.content.res.XmlResourceParser;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.SurfaceHolder;
-import android.view.SurfaceView;
+import android.view.GestureDetector;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.GestureDetector.OnGestureListener;
+import android.view.GestureDetector.SimpleOnGestureListener;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.AdapterView.OnItemSelectedListener;
 
@@ -34,6 +37,9 @@ public class Chart extends Activity implements OnItemSelectedListener
     private String mType;
     
     private Instrument mInstrument;
+    private GestureDetector gd;
+    
+    
     
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -56,7 +62,16 @@ public class Chart extends Activity implements OnItemSelectedListener
         FingerSurface fs = (FingerSurface) findViewById(R.id.SurfaceView01);
         //fs.setBackgroundDrawable(this.getResources().getDrawable(mInstrument.image));
         fs.setInstrument(mInstrument);
+        
+        gd = new GestureDetector(new MyGestureDetector());
+
         populateType();
+    }
+    
+    @Override
+    public boolean onTouchEvent(MotionEvent event)
+    {
+        return gd.onTouchEvent(event);// && super.onTouchEvent(event);
     }
 
     private void populateType()
@@ -135,10 +150,12 @@ public class Chart extends Activity implements OnItemSelectedListener
                         {
                             if (f.name.equals(fingering))
                             {
-                                if (f.comment != null && f.comment.length()>1)
+                                if (f.comment != null && f.comment.length()>1 && !f.comment.equalsIgnoreCase("basic") && !f.comment.equalsIgnoreCase("basic."))
                                 {
                                     Toast.makeText(this, f.comment, Toast.LENGTH_SHORT).show();
                                 }
+                                TextView tv = (TextView) findViewById(R.id.chart_title);
+                                tv.setText(mInstrument.name + " - " + n.name + " : " + f.name);
                                 fs.drawFingering(mInstrument.baseKeys, f);
                             }
                         }
@@ -309,9 +326,115 @@ public class Chart extends Activity implements OnItemSelectedListener
         }
     }
 
+    public void nextFingering()
+    {
+        Spinner fingering = (Spinner) findViewById(R.id.spin_fingering);
+        int current = fingering.getSelectedItemPosition();
+        int max = fingering.getCount();
+        current++;
+        if (current == max)
+        {
+            current = 0;
+        }
+        fingering.setSelection(current);
+    }
+    
+    public void previousFingering()
+    {
+        Spinner fingering = (Spinner) findViewById(R.id.spin_fingering);
+        int current = fingering.getSelectedItemPosition();
+        int max = fingering.getCount();
+        current--;
+        if (current == -1)
+        {
+            current = max-1;
+        }
+        fingering.setSelection(current);
+    }
+    
+    public void nextNote()
+    {
+        Spinner note = (Spinner) findViewById(R.id.spin_note);
+        int current = note.getSelectedItemPosition();
+        int max = note.getCount();
+        current++;
+        if (current == max)
+        {
+            current = 0;
+        }
+        note.setSelection(current);
+    }
+
+    public void previousNote()
+    {
+        Spinner note = (Spinner) findViewById(R.id.spin_note);
+        int current = note.getSelectedItemPosition();
+        int max = note.getCount();
+        current--;
+        if (current == -1)
+        {
+            current = max-1;
+        }
+        note.setSelection(current);
+    }
+
+    
+    // Gestures
+    
+    class MyGestureDetector extends SimpleOnGestureListener
+    {
+        private static final float V_LIMIT = 400;
+        
+        @Override
+        public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX,
+                float velocityY)
+        {
+            // TODO Auto-generated method stub
+            Log.i("Fling", velocityX + ", " + velocityY);
+            
+            if (Math.abs(velocityX) > Math.abs(velocityY))
+            {
+                // horizontal
+                if (Math.abs(velocityX) > V_LIMIT)
+                {
+                    if (velocityX > 0)
+                    {
+                        Log.i("Fling", "L -> R");
+                        previousFingering();
+                    }
+                    else
+                    {
+                        Log.i("Fling", "R -> L");
+                        nextFingering();
+                    }
+                    return true;
+                }
+            }
+            else
+            {
+                // vertical
+                if (Math.abs(velocityY) > V_LIMIT)
+                {
+                    if (velocityY > 0)
+                    {
+                        Log.i("Fling", "T -> B");
+                        previousNote();
+                    }
+                    else
+                    {
+                        Log.i("Fling", "B -> T");
+                        nextNote();
+                    }
+                    return true;
+                }
+            }
+            return false;
+        }
+    }
+
     @Override
     public void onNothingSelected(AdapterView<?> arg0)
     {
-        // do nothing
+        // TODO Auto-generated method stub
     }
 }
