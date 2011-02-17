@@ -118,15 +118,15 @@ public class FingerSurface extends SurfaceView implements Callback
             {
                 if (f.keysDowns.contains(bk.name))
                 {
-                    drawKey(c, bk, mKeyDownPaint, bg.getBounds(), ratio);
+                    drawKey(c, bk, mKeyDownPaint, bg.getBounds());
                 }
                 else if (f.keysTrillDowns.contains(bk.name))
                 {
-                    drawKey(c, bk, mTrillDownPaint, bg.getBounds(), ratio);
+                    drawKey(c, bk, mTrillDownPaint, bg.getBounds());
                 }
                 else if (f.keysTrillUp.contains(bk.name))
                 {
-                    drawKey(c, bk, mTrillUpPaint, bg.getBounds(), ratio);
+                    drawKey(c, bk, mTrillUpPaint, bg.getBounds());
                 }
                 else if (f.ringsDowns.contains(bk.name))
                 {
@@ -147,7 +147,7 @@ public class FingerSurface extends SurfaceView implements Callback
         }
     }
 
-    private void drawKey(Canvas c, BaseKey bk, Paint p, Rect imgBounds, float ratio)
+    private void drawKey(Canvas c, BaseKey bk, Paint p, Rect imgBounds)//, float ratio)
     {
         // TODO Auto-generated method stub
         switch (bk.type)
@@ -157,14 +157,14 @@ public class FingerSurface extends SurfaceView implements Callback
                 //imgBounds.left + imgBounds.width()*bk.positionx;
                 c.drawCircle(imgBounds.left + imgBounds.width()*bk.positionx, 
                         imgBounds.top + imgBounds.height()*bk.positiony, 
-                        bk.radius*ratio, 
+                        bk.radius*imgBounds.width(), 
                         p);
                 break;
             case BaseKey.TYPE_RECTANGLE:
                 c.drawRect(imgBounds.left + imgBounds.width()*bk.positionx, 
                         imgBounds.top + imgBounds.height()*bk.positiony, 
-                        imgBounds.left + imgBounds.width()*bk.positionx + bk.width*ratio, 
-                        imgBounds.top + imgBounds.height()*bk.positiony + bk.height*ratio, 
+                        imgBounds.left + imgBounds.width()*bk.positionx + bk.width*imgBounds.width(), 
+                        imgBounds.top + imgBounds.height()*bk.positiony + bk.height*imgBounds.width(), 
                         p);
                 break;
             case BaseKey.TYPE_ROUNDRECT:
@@ -242,11 +242,6 @@ public class FingerSurface extends SurfaceView implements Callback
                 //to be implemented
                 break;
         }
-    }
-    
-    private void drawRingKey(BaseKey bk, int colorId)
-    {
-        
     }
     
 }
