@@ -4,30 +4,30 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
     xsi:schemaLocation="http://www.adamfoster.net/instrument instrument.xsd"
     xsi:noNamespaceSchemaLocation="instrument.xsd" 
-    name="Flute" image="@drawable/flutev" >
+    name="Flute" image="@drawable/flutes" >
     
     <baseKeys>
-        <baseKey name="C" positionx="0.5" positiony="0.3" type="circle" radius="0.03" />
-        <baseKey name="Bb" positionx="0.44" positiony="0.33" type="circle" radius="0.02" />
-        <baseKey name="B" positionx="0.42" positiony="0.36" type="rectangle" width="0.032" height="0.06" />
-        <baseKey name="A" positionx="0.5" positiony="0.375" type="circle" radius="0.03" />
-        <baseKey name="G" positionx="0.5" positiony="0.45" type="circle" radius="0.03" />
-        <baseKey name="G#" positionx="0.53" positiony="0.48" type="rectangle" width="0.048" height="0.024" />
+        <baseKey name="C" positionx="0.515" positiony="0.235" type="circle" radius="0.015" />
+        <baseKey name="Bb" positionx="0.44" positiony="0.27" type="circle" radius="0.01" />
+        <baseKey name="B" positionx="0.43" positiony="0.29" type="rectangle" width="0.02" height="0.06" />
+        <baseKey name="A" positionx="0.515" positiony="0.321" type="circle" radius="0.02" />
+        <baseKey name="G" positionx="0.528" positiony="0.366" type="circle" radius="0.02" />
+        <baseKey name="G#" positionx="0.55" positiony="0.364" type="rectangle" width="0.020" height="0.02" />
         <!-- break -->
-        <baseKey name="F" positionx="0.5" positiony="0.6" type="circle" radius="0.03" />
-        <baseKey name="E" positionx="0.5" positiony="0.675" type="circle" radius="0.03" />
-        <baseKey name="D" positionx="0.5" positiony="0.75" type="circle" radius="0.03" />
+        <baseKey name="F" positionx="0.515" positiony="0.513" type="circle" radius="0.02" />
+        <baseKey name="E" positionx="0.515" positiony="0.570" type="circle" radius="0.02" />
+        <baseKey name="D" positionx="0.515" positiony="0.628" type="circle" radius="0.02" />
         <!-- break -->
-        <baseKey name="EbFoot" positionx="0.48" positiony="0.795" type="rectangle" width="0.06" height="0.03" />
-        <baseKey name="DbFoot" positionx="0.48" positiony="0.825" type="rectangle" width="0.02" height="0.06" />
-        <baseKey name="CFoot" positionx="0.505" positiony="0.825" type="rectangle" width="0.016" height="0.06" />
-        <baseKey name="BFoot" positionx="0.525" positiony="0.825" type="rectangle" width="0.016" height="0.06" />
-        <baseKey name="Gizmo" positionx="0.52" positiony="0.88" type="circle" radius="0.012" />
+        <baseKey name="EbFoot" positionx="0.46" positiony="0.652" type="rectangle" width="0.045" height="0.02" />
+        <baseKey name="DbFoot" positionx="0.46" positiony="0.678" type="rectangle" width="0.01" height="0.04" />
+        <baseKey name="CFoot" positionx="0.475" positiony="0.678" type="rectangle" width="0.01" height="0.04" />
+        <baseKey name="BFoot" positionx="0.49" positiony="0.678" type="rectangle" width="0.01" height="0.03" />
+        <baseKey name="Gizmo" positionx="0.495" positiony="0.712" type="circle" radius="0.005" />
         <!-- trills -->
-        <baseKey name="T1" positionx="0.54" positiony="0.63" type="rectangle" width="0.024" height="0.018" />
-        <baseKey name="T2" positionx="0.54" positiony="0.70" type="rectangle" width="0.024" height="0.018" />
-        <baseKey name="BbTrill" positionx="0.47" positiony="0.54" type="circle" radius="0.012" />
-        <baseKey name="C#Trill" positionx="0.46" positiony="0.57" type="circle" radius="0.012" />
+        <baseKey name="T1" positionx="0.5" positiony="0.54" type="rectangle" width="0.024" height="0.01" />
+        <baseKey name="T2" positionx="0.5" positiony="0.597" type="rectangle" width="0.024" height="0.01" />
+        <baseKey name="BbTrill" positionx="0.49" positiony="0.471" type="circle" radius="0.01" />
+        <baseKey name="C#Trill" positionx="0.47" positiony="0.49" type="circle" radius="0.01" />
     </baseKeys>
     
 	<set name="Notes">

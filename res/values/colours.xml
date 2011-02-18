@@ -3,5 +3,5 @@
     <color name="keyDown">#FF0000</color>
     <color name="keyTrillDown">#00FF00</color>
     <color name="keyTrillUp">#0000FF</color>
-    <color name="baseKey">#000000</color>
+    <color name="baseKey">#FFFFFF</color>
 </resources>
