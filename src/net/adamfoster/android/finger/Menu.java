@@ -80,8 +80,8 @@ public class Menu extends Activity
     public void buttonClick(View view)
     {
         Intent i = new Intent(this, Chart.class);
-        i.putExtra("instrument", "flute");
-        i.putExtra("type", R.id.ButtonTrills);
+        i.putExtra(INSTRUMENT_NAME, R.xml.flute);
+        //i.putExtra(TYPE_NAME, R.id.ButtonTrills);
         startActivity(i);
     }
 }

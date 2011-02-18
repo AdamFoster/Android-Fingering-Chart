@@ -23,6 +23,7 @@ public class FingerSurface extends SurfaceView implements Callback
     private Paint mTrillDownPaint;
     private Paint mTrillUpPaint;
     private Paint mBaseKeyPaint;
+    private Fingering mFingering;
     
 
     public FingerSurface(Context context)
@@ -70,8 +71,10 @@ public class FingerSurface extends SurfaceView implements Callback
 
     }
 
-    public void drawFingering(List<BaseKey> baseKeys, Fingering f)
+    public void drawFingering(Fingering f)
     {
+        mFingering = f;
+        
         Canvas c = null;
         try
         {
@@ -109,12 +112,15 @@ public class FingerSurface extends SurfaceView implements Callback
             bg.setBounds(new Rect(l, d, w+l, h+d));
             bg.draw(c);
          
-            for (BaseKey bk : baseKeys)
+            
+            // outlines
+            for (BaseKey bk : mInstrument.baseKeys)
             {
-                drawKeyOutline(c, bk, mBaseKeyPaint, bg.getBounds(), ratio);
+                drawKeyOutline(c, bk, mBaseKeyPaint, bg.getBounds());
             }
-                
-            for (BaseKey bk : baseKeys)
+            
+            // active keys
+            for (BaseKey bk : mInstrument.baseKeys)
             {
                 if (f.keysDowns.contains(bk.name))
                 {
@@ -130,7 +136,7 @@ public class FingerSurface extends SurfaceView implements Callback
                 }
                 else if (f.ringsDowns.contains(bk.name))
                 {
-                    drawRing(c, bk, mKeyDownPaint, bg.getBounds(), ratio);
+                    drawRing(c, bk, mKeyDownPaint, bg.getBounds());
                 }
             }
         }
@@ -147,14 +153,11 @@ public class FingerSurface extends SurfaceView implements Callback
         }
     }
 
-    private void drawKey(Canvas c, BaseKey bk, Paint p, Rect imgBounds)//, float ratio)
+    private void drawKey(Canvas c, BaseKey bk, Paint p, Rect imgBounds)
     {
-        // TODO Auto-generated method stub
         switch (bk.type)
         {
-            //left = imgBounds.
             case BaseKey.TYPE_CIRCLE:
-                //imgBounds.left + imgBounds.width()*bk.positionx;
                 c.drawCircle(imgBounds.left + imgBounds.width()*bk.positionx, 
                         imgBounds.top + imgBounds.height()*bk.positiony, 
                         bk.radius*imgBounds.width(), 
@@ -176,31 +179,28 @@ public class FingerSurface extends SurfaceView implements Callback
         }
     }
     
-    private void drawRing(Canvas c, BaseKey bk, Paint p, Rect imgBounds, float ratio)
+    private void drawRing(Canvas c, BaseKey bk, Paint p, Rect imgBounds)
     {
         Paint.Style s = p.getStyle();
         float sw = p.getStrokeWidth();
         p.setStyle(Paint.Style.STROKE);
         
-        // TODO Auto-generated method stub
         switch (bk.type)
         {
-            //left = imgBounds.
             case BaseKey.TYPE_CIRCLE:
-                p.setStrokeWidth((float) (ratio*bk.radius*.7));
-                //imgBounds.left + imgBounds.width()*bk.positionx;
+                p.setStrokeWidth((float) (imgBounds.width()*bk.radius*.7));
                 c.drawCircle(imgBounds.left + imgBounds.width()*bk.positionx, 
                         imgBounds.top + imgBounds.height()*bk.positiony, 
-                        bk.radius*ratio, 
+                        bk.radius*imgBounds.width(), 
                         p);
                 break;
             case BaseKey.TYPE_RECTANGLE:
-                p.setStrokeWidth((float) (ratio*Math.min(bk.width, bk.height)*.3));
+                p.setStrokeWidth((float) (imgBounds.width()*Math.min(bk.width, bk.height)*.3));
 
                 c.drawRect(imgBounds.left + imgBounds.width()*bk.positionx, 
                         imgBounds.top + imgBounds.height()*bk.positiony, 
-                        imgBounds.left + imgBounds.width()*bk.positionx + bk.width*ratio, 
-                        imgBounds.top + imgBounds.height()*bk.positiony + bk.height*ratio, 
+                        imgBounds.left + imgBounds.width()*bk.positionx + bk.width*imgBounds.width(), 
+                        imgBounds.top + imgBounds.height()*bk.positiony + bk.height*imgBounds.width(), 
                         p);
                 break;
             case BaseKey.TYPE_ROUNDRECT:
@@ -215,24 +215,21 @@ public class FingerSurface extends SurfaceView implements Callback
         mKeyDownPaint.setStrokeWidth(sw);
     }
     
-    private void drawKeyOutline(Canvas c, BaseKey bk, Paint p, Rect imgBounds, float ratio)
+    private void drawKeyOutline(Canvas c, BaseKey bk, Paint p, Rect imgBounds)
     {
-        // TODO Auto-generated method stub
         switch (bk.type)
         {
-            //left = imgBounds.
             case BaseKey.TYPE_CIRCLE:
-                //imgBounds.left + imgBounds.width()*bk.positionx;
                 c.drawCircle(imgBounds.left + imgBounds.width()*bk.positionx, 
                         imgBounds.top + imgBounds.height()*bk.positiony, 
-                        bk.radius*ratio, 
+                        bk.radius*imgBounds.width(), 
                         p);
                 break;
             case BaseKey.TYPE_RECTANGLE:
                 c.drawRect(imgBounds.left + imgBounds.width()*bk.positionx, 
                         imgBounds.top + imgBounds.height()*bk.positiony, 
-                        imgBounds.left + imgBounds.width()*bk.positionx + bk.width*ratio, 
-                        imgBounds.top + imgBounds.height()*bk.positiony + bk.height*ratio, 
+                        imgBounds.left + imgBounds.width()*bk.positionx + bk.width*imgBounds.width(), 
+                        imgBounds.top + imgBounds.height()*bk.positiony + bk.height*imgBounds.width(), 
                         p);
                 break;
             case BaseKey.TYPE_ROUNDRECT:

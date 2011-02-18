@@ -4,7 +4,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
     xsi:schemaLocation="http://www.adamfoster.net/instrument instrument.xsd"
     xsi:noNamespaceSchemaLocation="instrument.xsd" 
-    name="Flute" image="@drawable/musiclove" >
+    name="Flute" image="@drawable/flutev" >
     
     <baseKeys>
         <baseKey name="C" positionx="0.5" positiony="0.3" type="circle" radius="0.03" />

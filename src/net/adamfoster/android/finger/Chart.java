@@ -13,6 +13,7 @@ import org.xmlpull.v1.XmlPullParserException;
 import android.app.Activity;
 import android.content.res.XmlResourceParser;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
@@ -33,8 +34,7 @@ public class Chart extends Activity implements OnItemSelectedListener
     private static final int MODE_TRILLUP = 3;
     private static final int MODE_RING_DOWN = 4;
     
-    private String mInstrumentName;
-    private String mType;
+    private int mInstrumentXml;
     
     private Instrument mInstrument;
     private GestureDetector gd;
@@ -49,19 +49,17 @@ public class Chart extends Activity implements OnItemSelectedListener
         setContentView(R.layout.chart);
 
         Bundle extras = getIntent().getExtras();
-        mInstrumentName = (extras != null 
-                ? extras.getString(Menu.INSTRUMENT_NAME)
-                : "Flute");
-        mType = (extras != null 
-                ? extras.getString(Menu.TYPE_NAME)
-                : "Notes"
-                );
+        mInstrumentXml = (extras != null 
+                ? extras.getInt(Menu.INSTRUMENT_NAME, R.xml.flute)
+                : R.xml.flute);
         
         mInstrument = parse();
         
         FingerSurface fs = (FingerSurface) findViewById(R.id.SurfaceView01);
-        //fs.setBackgroundDrawable(this.getResources().getDrawable(mInstrument.image));
         fs.setInstrument(mInstrument);
+        
+        TextView tv = (TextView) findViewById(R.id.chart_title);
+        tv.setMovementMethod(ScrollingMovementMethod.getInstance());
         
         gd = new GestureDetector(new MyGestureDetector());
 
@@ -150,13 +148,15 @@ public class Chart extends Activity implements OnItemSelectedListener
                         {
                             if (f.name.equals(fingering))
                             {
+                                String c = "";
                                 if (f.comment != null && f.comment.length()>1 && !f.comment.equalsIgnoreCase("basic") && !f.comment.equalsIgnoreCase("basic."))
                                 {
-                                    Toast.makeText(this, f.comment, Toast.LENGTH_SHORT).show();
+                                    //Toast.makeText(this, f.comment, Toast.LENGTH_SHORT).show();
+                                    c = " (" + f.comment + ")";
                                 }
                                 TextView tv = (TextView) findViewById(R.id.chart_title);
-                                tv.setText(mInstrument.name + " - " + n.name + " : " + f.name);
-                                fs.drawFingering(mInstrument.baseKeys, f);
+                                tv.setText(mInstrument.name + " - " + n.name + " : " + f.name + c);
+                                fs.drawFingering(f);
                             }
                         }
                     }
@@ -180,8 +180,8 @@ public class Chart extends Activity implements OnItemSelectedListener
         
         try
         {
-            //int xmlid = this.getResources().getIdentifier(mInstrument.toLowerCase(), "xml", "net.adamfoster.android.finger");
-            xrp = this.getResources().getXml(R.xml.flute);
+            //int xmlid = this.getResources().getIdentifier(mInstrumentName.toLowerCase(), "xml", "net.adamfoster.android.finger");
+            xrp = this.getResources().getXml(mInstrumentXml);
             
             while(xrp.getEventType() != XmlResourceParser.END_DOCUMENT)
             {
@@ -389,8 +389,7 @@ public class Chart extends Activity implements OnItemSelectedListener
         public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX,
                 float velocityY)
         {
-            // TODO Auto-generated method stub
-            Log.i("Fling", velocityX + ", " + velocityY);
+            //Log.i("Fling", velocityX + ", " + velocityY);
             
             if (Math.abs(velocityX) > Math.abs(velocityY))
             {
@@ -399,12 +398,12 @@ public class Chart extends Activity implements OnItemSelectedListener
                 {
                     if (velocityX > 0)
                     {
-                        Log.i("Fling", "L -> R");
+                        //Log.i("Fling", "L -> R");
                         previousFingering();
                     }
                     else
                     {
-                        Log.i("Fling", "R -> L");
+                        //Log.i("Fling", "R -> L");
                         nextFingering();
                     }
                     return true;
@@ -417,12 +416,12 @@ public class Chart extends Activity implements OnItemSelectedListener
                 {
                     if (velocityY > 0)
                     {
-                        Log.i("Fling", "T -> B");
+                        //Log.i("Fling", "T -> B");
                         previousNote();
                     }
                     else
                     {
-                        Log.i("Fling", "B -> T");
+                        //Log.i("Fling", "B -> T");
                         nextNote();
                     }
                     return true;
