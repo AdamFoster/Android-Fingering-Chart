@@ -8,7 +8,7 @@
 
     <xsd:complexType name="keys">
     	<xsd:sequence>
-    		<xsd:element ref="ins:key" maxOccurs="unbounded" />
+    		<xsd:element ref="ins:key" maxOccurs="unbounded" minOccurs="0"/>
     	</xsd:sequence>
     </xsd:complexType>
     

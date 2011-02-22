@@ -116,7 +116,7 @@ public class FingerSurface extends SurfaceView implements Callback
             // outlines
             for (BaseKey bk : mInstrument.baseKeys)
             {
-                drawKeyOutline(c, bk, mBaseKeyPaint, bg.getBounds());
+                drawKeyOutline(c, bk, mBaseKeyPaint, bg.getBounds(), bg.getBounds().height());
             }
             
             // active keys
@@ -124,19 +124,20 @@ public class FingerSurface extends SurfaceView implements Callback
             {
                 if (f.keysDowns.contains(bk.name))
                 {
-                    drawKey(c, bk, mKeyDownPaint, bg.getBounds());
+                    drawKey(c, bk, mKeyDownPaint, bg.getBounds(), bg.getBounds().height());
                 }
                 else if (f.keysTrillDowns.contains(bk.name))
                 {
-                    drawKey(c, bk, mTrillDownPaint, bg.getBounds());
+                    drawKey(c, bk, mTrillDownPaint, bg.getBounds(), bg.getBounds().height());
                 }
                 else if (f.keysTrillUp.contains(bk.name))
                 {
-                    drawKey(c, bk, mTrillUpPaint, bg.getBounds());
+                    drawKey(c, bk, mTrillUpPaint, bg.getBounds(), bg.getBounds().height());
                 }
-                else if (f.ringsDowns.contains(bk.name))
+                //rings need to be rendered separately
+                if (f.ringsDowns.contains(bk.name))
                 {
-                    drawRing(c, bk, mKeyDownPaint, bg.getBounds());
+                    drawRing(c, bk, mKeyDownPaint, bg.getBounds(), bg.getBounds().height());
                 }
             }
         }
@@ -153,21 +154,21 @@ public class FingerSurface extends SurfaceView implements Callback
         }
     }
 
-    private void drawKey(Canvas c, BaseKey bk, Paint p, Rect imgBounds)
+    private void drawKey(Canvas c, BaseKey bk, Paint p, Rect imgBounds, int scale)
     {
         switch (bk.type)
         {
             case BaseKey.TYPE_CIRCLE:
                 c.drawCircle(imgBounds.left + imgBounds.width()*bk.positionx, 
                         imgBounds.top + imgBounds.height()*bk.positiony, 
-                        bk.radius*imgBounds.width(), 
+                        bk.radius*scale, 
                         p);
                 break;
             case BaseKey.TYPE_RECTANGLE:
                 c.drawRect(imgBounds.left + imgBounds.width()*bk.positionx, 
                         imgBounds.top + imgBounds.height()*bk.positiony, 
-                        imgBounds.left + imgBounds.width()*bk.positionx + bk.width*imgBounds.width(), 
-                        imgBounds.top + imgBounds.height()*bk.positiony + bk.height*imgBounds.width(), 
+                        imgBounds.left + imgBounds.width()*bk.positionx + bk.width*scale, 
+                        imgBounds.top + imgBounds.height()*bk.positiony + bk.height*scale, 
                         p);
                 break;
             case BaseKey.TYPE_ROUNDRECT:
@@ -179,7 +180,7 @@ public class FingerSurface extends SurfaceView implements Callback
         }
     }
     
-    private void drawRing(Canvas c, BaseKey bk, Paint p, Rect imgBounds)
+    private void drawRing(Canvas c, BaseKey bk, Paint p, Rect imgBounds, int scale)
     {
         Paint.Style s = p.getStyle();
         float sw = p.getStrokeWidth();
@@ -188,19 +189,19 @@ public class FingerSurface extends SurfaceView implements Callback
         switch (bk.type)
         {
             case BaseKey.TYPE_CIRCLE:
-                p.setStrokeWidth((float) (imgBounds.width()*bk.radius*.7));
+                p.setStrokeWidth((float) (scale*bk.radius*.6));
                 c.drawCircle(imgBounds.left + imgBounds.width()*bk.positionx, 
                         imgBounds.top + imgBounds.height()*bk.positiony, 
-                        bk.radius*imgBounds.width(), 
+                        (float)(bk.radius*scale*0.8), 
                         p);
                 break;
             case BaseKey.TYPE_RECTANGLE:
-                p.setStrokeWidth((float) (imgBounds.width()*Math.min(bk.width, bk.height)*.3));
+                p.setStrokeWidth((float) (scale*Math.min(bk.width, bk.height)*.3));
 
                 c.drawRect(imgBounds.left + imgBounds.width()*bk.positionx, 
                         imgBounds.top + imgBounds.height()*bk.positiony, 
-                        imgBounds.left + imgBounds.width()*bk.positionx + bk.width*imgBounds.width(), 
-                        imgBounds.top + imgBounds.height()*bk.positiony + bk.height*imgBounds.width(), 
+                        imgBounds.left + imgBounds.width()*bk.positionx + bk.width*scale, 
+                        imgBounds.top + imgBounds.height()*bk.positiony + bk.height*scale, 
                         p);
                 break;
             case BaseKey.TYPE_ROUNDRECT:
@@ -215,21 +216,21 @@ public class FingerSurface extends SurfaceView implements Callback
         mKeyDownPaint.setStrokeWidth(sw);
     }
     
-    private void drawKeyOutline(Canvas c, BaseKey bk, Paint p, Rect imgBounds)
+    private void drawKeyOutline(Canvas c, BaseKey bk, Paint p, Rect imgBounds, int scale)
     {
         switch (bk.type)
         {
             case BaseKey.TYPE_CIRCLE:
                 c.drawCircle(imgBounds.left + imgBounds.width()*bk.positionx, 
                         imgBounds.top + imgBounds.height()*bk.positiony, 
-                        bk.radius*imgBounds.width(), 
+                        bk.radius*scale, 
                         p);
                 break;
             case BaseKey.TYPE_RECTANGLE:
                 c.drawRect(imgBounds.left + imgBounds.width()*bk.positionx, 
                         imgBounds.top + imgBounds.height()*bk.positiony, 
-                        imgBounds.left + imgBounds.width()*bk.positionx + bk.width*imgBounds.width(), 
-                        imgBounds.top + imgBounds.height()*bk.positiony + bk.height*imgBounds.width(), 
+                        imgBounds.left + imgBounds.width()*bk.positionx + bk.width*scale, 
+                        imgBounds.top + imgBounds.height()*bk.positiony + bk.height*scale, 
                         p);
                 break;
             case BaseKey.TYPE_ROUNDRECT:

@@ -18,7 +18,6 @@ import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.GestureDetector.OnGestureListener;
 import android.view.GestureDetector.SimpleOnGestureListener;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -58,8 +57,8 @@ public class Chart extends Activity implements OnItemSelectedListener
         FingerSurface fs = (FingerSurface) findViewById(R.id.SurfaceView01);
         fs.setInstrument(mInstrument);
         
-        TextView tv = (TextView) findViewById(R.id.chart_title);
-        tv.setMovementMethod(ScrollingMovementMethod.getInstance());
+//ss        TextView tv = (TextView) findViewById(R.id.chart_title);
+//        tv.setMovementMethod(ScrollingMovementMethod.getInstance());
         
         gd = new GestureDetector(new MyGestureDetector());
 
@@ -156,6 +155,7 @@ public class Chart extends Activity implements OnItemSelectedListener
                                 }
                                 TextView tv = (TextView) findViewById(R.id.chart_title);
                                 tv.setText(mInstrument.name + " - " + n.name + " : " + f.name + c);
+                                tv.setMovementMethod(ScrollingMovementMethod.getInstance());
                                 fs.drawFingering(f);
                             }
                         }
