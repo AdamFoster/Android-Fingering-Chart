@@ -32,6 +32,8 @@ public class Chart extends Activity implements OnItemSelectedListener
     private static final int MODE_TRILLDOWN = 2;
     private static final int MODE_TRILLUP = 3;
     private static final int MODE_RING_DOWN = 4;
+    private static final int MODE_RING_TRILLDOWN = 5;
+    private static final int MODE_RING_TRILLUP = 6;
     
     private int mInstrumentXml;
     
@@ -239,6 +241,14 @@ public class Chart extends Activity implements OnItemSelectedListener
                     {
                         mode = MODE_RING_DOWN;
                     }
+                    else if (currentTag.equals("ringsTrillDown"))
+                    {
+                        mode = MODE_RING_TRILLDOWN;
+                    }
+                    else if (currentTag.equals("ringsTrillUp"))
+                    {
+                        mode = MODE_RING_TRILLUP;
+                    }
                     else if (currentTag.equals("key"))
                     {
                         switch (mode)
@@ -254,6 +264,12 @@ public class Chart extends Activity implements OnItemSelectedListener
                                 break;
                             case MODE_RING_DOWN:
                                 fingering.ringsDowns.add(xrp.nextText());
+                                break;
+                            case MODE_RING_TRILLDOWN:
+                                fingering.ringsTrillDowns.add(xrp.nextText());
+                                break;
+                            case MODE_RING_TRILLUP:
+                                fingering.ringsTrillUps.add(xrp.nextText());
                                 break;
                         }
                     }

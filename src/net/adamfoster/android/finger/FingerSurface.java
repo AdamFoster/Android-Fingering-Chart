@@ -139,6 +139,14 @@ public class FingerSurface extends SurfaceView implements Callback
                 {
                     drawRing(c, bk, mKeyDownPaint, bg.getBounds(), bg.getBounds().height());
                 }
+                else if (f.ringsTrillDowns.contains(bk.name))
+                {
+                    drawRing(c, bk, mTrillDownPaint, bg.getBounds(), bg.getBounds().height());
+                }
+                else if (f.ringsTrillUps.contains(bk.name))
+                {
+                    drawRing(c, bk, mTrillUpPaint, bg.getBounds(), bg.getBounds().height());
+                }
             }
         }
         catch (Exception e)
@@ -192,7 +200,7 @@ public class FingerSurface extends SurfaceView implements Callback
                 p.setStrokeWidth((float) (scale*bk.radius*.6));
                 c.drawCircle(imgBounds.left + imgBounds.width()*bk.positionx, 
                         imgBounds.top + imgBounds.height()*bk.positiony, 
-                        (float)(bk.radius*scale*0.8), 
+                        (float)(bk.radius*scale*0.7), 
                         p);
                 break;
             case BaseKey.TYPE_RECTANGLE:
@@ -212,8 +220,8 @@ public class FingerSurface extends SurfaceView implements Callback
                 break;
         }
         
-        mKeyDownPaint.setStyle(s);
-        mKeyDownPaint.setStrokeWidth(sw);
+        p.setStyle(s);
+        p.setStrokeWidth(sw);
     }
     
     private void drawKeyOutline(Canvas c, BaseKey bk, Paint p, Rect imgBounds, int scale)
@@ -241,6 +249,5 @@ public class FingerSurface extends SurfaceView implements Callback
                 break;
         }
     }
-    
 }
 

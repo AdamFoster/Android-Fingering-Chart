@@ -12,6 +12,8 @@ public class Fingering
     public List<String> keysTrillDowns;
     public List<String> keysTrillUp;
     public List<String> ringsDowns;
+    public List<String> ringsTrillDowns;
+    public List<String> ringsTrillUps;
     
     public Fingering()
     {
@@ -19,5 +21,7 @@ public class Fingering
         keysTrillDowns = new ArrayList<String>();
         keysTrillUp = new ArrayList<String>();
         ringsDowns = new ArrayList<String>();
+        ringsTrillDowns = new ArrayList<String>();
+        ringsTrillUps = new ArrayList<String>();
     }
 }
