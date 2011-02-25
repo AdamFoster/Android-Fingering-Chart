@@ -1,7 +1,5 @@
 package net.adamfoster.android.finger;
 
-import java.util.List;
-
 import net.adamfoster.android.finger.beans.BaseKey;
 import net.adamfoster.android.finger.beans.Fingering;
 import net.adamfoster.android.finger.beans.Instrument;
@@ -9,6 +7,7 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Rect;
+import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.SurfaceHolder;
@@ -134,6 +133,13 @@ public class FingerSurface extends SurfaceView implements Callback
                 {
                     drawKey(c, bk, mTrillUpPaint, bg.getBounds(), bg.getBounds().height());
                 }
+                
+                //half down keys need to be rendered separately
+                if (f.keysHalfDowns.contains(bk.name))
+                {
+                    drawHalfKey(c, bk, mKeyDownPaint, bg.getBounds(), bg.getBounds().height());
+                }
+                
                 //rings need to be rendered separately
                 if (f.ringsDowns.contains(bk.name))
                 {
@@ -187,7 +193,39 @@ public class FingerSurface extends SurfaceView implements Callback
                 break;
         }
     }
-    
+
+    private void drawHalfKey(Canvas c, BaseKey bk, Paint p, Rect imgBounds, int scale)
+    {
+        switch (bk.type)
+        {
+            case BaseKey.TYPE_CIRCLE:
+                //c.drawCircle(imgBounds.left + imgBounds.width()*bk.positionx, 
+                //        imgBounds.top + imgBounds.height()*bk.positiony, 
+                //        bk.radius*scale, 
+                //        p);
+                
+                c.drawArc(new RectF(imgBounds.left + imgBounds.width()*bk.positionx - bk.radius*scale,
+                        imgBounds.top + imgBounds.height()*bk.positiony - bk.radius*scale, 
+                        imgBounds.left + imgBounds.width()*bk.positionx + bk.radius*scale,
+                        imgBounds.top + imgBounds.height()*bk.positiony + bk.radius*scale), 
+                        90, 270, false, p);
+                break;
+            case BaseKey.TYPE_RECTANGLE:
+                c.drawRect(imgBounds.left + imgBounds.width()*bk.positionx, 
+                        imgBounds.top + imgBounds.height()*bk.positiony, 
+                        (float)(imgBounds.left + imgBounds.width()*bk.positionx + bk.width*scale/1.8), 
+                        imgBounds.top + imgBounds.height()*bk.positiony + bk.height*scale, 
+                        p);
+                break;
+            case BaseKey.TYPE_ROUNDRECT:
+                // FIX c.drawRoundRect(new RectF(c.getWidth()*bk.positionx, c.getHeight()*bk.positiony, c.getWidth()*bk.positionx+bk.width, c.getHeight()*bk.positiony+bk.height), bk.rx, bk.ry, p);
+                break;
+            case BaseKey.TYPE_IMAGE:
+                //to be implemented
+                break;
+        }
+    }
+
     private void drawRing(Canvas c, BaseKey bk, Paint p, Rect imgBounds, int scale)
     {
         Paint.Style s = p.getStyle();

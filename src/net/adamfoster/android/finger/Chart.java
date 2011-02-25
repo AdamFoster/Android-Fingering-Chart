@@ -1,6 +1,8 @@
 package net.adamfoster.android.finger;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import net.adamfoster.android.finger.beans.BaseKey;
 import net.adamfoster.android.finger.beans.Fingering;
@@ -16,6 +18,7 @@ import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.GestureDetector;
+import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.GestureDetector.SimpleOnGestureListener;
@@ -28,24 +31,14 @@ import android.widget.AdapterView.OnItemSelectedListener;
 
 public class Chart extends Activity implements OnItemSelectedListener
 {
-    private static final int MODE_DOWN = 1;
-    private static final int MODE_TRILLDOWN = 2;
-    private static final int MODE_TRILLUP = 3;
-    private static final int MODE_RING_DOWN = 4;
-    private static final int MODE_RING_TRILLDOWN = 5;
-    private static final int MODE_RING_TRILLUP = 6;
-    
     private int mInstrumentXml;
     
     private Instrument mInstrument;
     private GestureDetector gd;
     
-    
-    
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
-        // TODO Auto-generated method stub
         super.onCreate(savedInstanceState);
         setContentView(R.layout.chart);
 
@@ -58,9 +51,6 @@ public class Chart extends Activity implements OnItemSelectedListener
         
         FingerSurface fs = (FingerSurface) findViewById(R.id.SurfaceView01);
         fs.setInstrument(mInstrument);
-        
-//ss        TextView tv = (TextView) findViewById(R.id.chart_title);
-//        tv.setMovementMethod(ScrollingMovementMethod.getInstance());
         
         gd = new GestureDetector(new MyGestureDetector());
 
@@ -153,10 +143,10 @@ public class Chart extends Activity implements OnItemSelectedListener
                                 if (f.comment != null && f.comment.length()>1 && !f.comment.equalsIgnoreCase("basic") && !f.comment.equalsIgnoreCase("basic."))
                                 {
                                     //Toast.makeText(this, f.comment, Toast.LENGTH_SHORT).show();
-                                    c = " (" + f.comment + ")";
+                                    c = " - " + f.comment;
                                 }
                                 TextView tv = (TextView) findViewById(R.id.chart_title);
-                                tv.setText(mInstrument.name + " - " + n.name + " : " + f.name + c);
+                                tv.setText(n.name + " : " + f.name + c);
                                 tv.setMovementMethod(ScrollingMovementMethod.getInstance());
                                 fs.drawFingering(f);
                             }
@@ -167,7 +157,37 @@ public class Chart extends Activity implements OnItemSelectedListener
         }
     }
 
-
+    @Override
+    public boolean onCreateOptionsMenu(android.view.Menu menu)
+    {
+        // TODO Auto-generated method stub
+        super.onCreateOptionsMenu(menu);
+        for (String s : getResources().getStringArray(R.array.instruments))
+        {
+            menu.add(s);
+        }
+        return true;
+    }
+    
+    @Override
+    public boolean onMenuItemSelected(int featureId, MenuItem item)
+    {
+        String s = item.getTitle().toString();
+        
+        if (s != null)
+        {
+            int id = getResources().getIdentifier(s.toLowerCase(), "xml", this.getClass().getPackage().getName());
+            
+            if (id != 0)
+            {
+                //TODO: load id here!
+                
+                
+                return true;
+            }
+        }
+        return super.onMenuItemSelected(featureId, item);
+    }
 
     private Instrument parse()
     {
@@ -178,11 +198,9 @@ public class Chart extends Activity implements OnItemSelectedListener
         NoteSet ns = null;
         Note note = null;
         Fingering fingering = null;
-        int mode = MODE_DOWN;
         
         try
         {
-            //int xmlid = this.getResources().getIdentifier(mInstrumentName.toLowerCase(), "xml", "net.adamfoster.android.finger");
             xrp = this.getResources().getXml(mInstrumentXml);
             
             while(xrp.getEventType() != XmlResourceParser.END_DOCUMENT)
@@ -224,7 +242,16 @@ public class Chart extends Activity implements OnItemSelectedListener
                         fingering = new Fingering();
                         fingering.name = xrp.getAttributeValue(null, "name");
                         fingering.comment = xrp.getAttributeValue(null, "comment");
+                        
+                        fingering.keysDowns = uzip(xrp.getAttributeValue(null, "keysDown"));
+                        fingering.keysTrillDowns = uzip(xrp.getAttributeValue(null, "keysTrillDown"));
+                        fingering.keysTrillUp = uzip(xrp.getAttributeValue(null, "keysTrillUp"));
+                        fingering.ringsDowns = uzip(xrp.getAttributeValue(null, "ringsDown"));
+                        fingering.ringsTrillDowns = uzip(xrp.getAttributeValue(null, "ringsTrillDown"));
+                        fingering.ringsTrillUps = uzip(xrp.getAttributeValue(null, "ringsTrillUp"));
+                        fingering.keysHalfDowns = uzip(xrp.getAttributeValue(null, "keysHalfDown"));
                     }
+                    /*
                     else if (currentTag.equals("keysDown"))
                     {
                         mode = MODE_DOWN;
@@ -273,6 +300,7 @@ public class Chart extends Activity implements OnItemSelectedListener
                                 break;
                         }
                     }
+                    // */
                 }
                 else if (xrp.getEventType() == XmlResourceParser.END_TAG)
                 {
@@ -313,6 +341,22 @@ public class Chart extends Activity implements OnItemSelectedListener
         }
         
         return ins;
+    }
+
+    private List<String> uzip(String k)
+    {
+        List<String> l = new ArrayList<String>();
+        
+        if (k != null && k.length() > 0)
+        {
+            String[] ka = k.split(",");
+            for (String s : ka)
+            {
+                l.add(s.trim());
+            }
+        }
+        
+        return l;
     }
 
     @Override

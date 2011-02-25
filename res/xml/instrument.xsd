@@ -29,7 +29,7 @@
     </xsd:complexType>
     
     <xsd:complexType name="fingering">
-        <xsd:sequence>
+        <!-- xsd:sequence>
             <xsd:element name="keysDown" type="ins:keys" minOccurs="0" maxOccurs="1" />
             <xsd:element name="ringsDown" type="ins:keys" minOccurs="0" maxOccurs="1" />
             <xsd:element name="keysHalfDown" type="ins:keys" minOccurs="0" maxOccurs="1" />
@@ -39,9 +39,16 @@
             <xsd:element name="keysTrillUp" type="ins:keys" minOccurs="0" maxOccurs="1" />
             <xsd:element name="keysHalfTrillUp" type="ins:keys" minOccurs="0" maxOccurs="1" />
             <xsd:element name="ringsTrillUp" type="ins:keys" minOccurs="0" maxOccurs="1" />
-        </xsd:sequence>
+        </xsd:sequence>  -->
         <xsd:attribute name="name" type="xsd:string" />
         <xsd:attribute name="comment" type="xsd:string" />
+        <xsd:attribute name="keysDown" type="xsd:string" use="optional" />
+        <xsd:attribute name="keysHalfDown" type="xsd:string" use="optional" />
+        <xsd:attribute name="keysTrillDown" type="xsd:string" use="optional" />
+        <xsd:attribute name="keysTrillUp" type="xsd:string" use="optional" />
+        <xsd:attribute name="ringsDown" type="xsd:string" use="optional" />
+        <xsd:attribute name="ringsTrillDown" type="xsd:string" use="optional" />
+        <xsd:attribute name="ringsTrillUp" type="xsd:string" use="optional" />
     </xsd:complexType>
     
     <xsd:complexType name="note">

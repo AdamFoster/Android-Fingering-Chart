@@ -1,4 +1,4 @@
 <instruments>
-    <instrument name="Flute" />
-    <instrument name="Clarinet" />
+    <instrument name="Flute" id="@xml/flute" />
+    <instrument name="Clarinet" id="@xml/clarinet" />
 </instruments>
