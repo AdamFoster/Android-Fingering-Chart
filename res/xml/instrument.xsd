@@ -20,6 +20,7 @@
         <xsd:attribute name="radius" type="xsd:string" use="optional" />
         <xsd:attribute name="width" type="xsd:string" use="optional" />
         <xsd:attribute name="height" type="xsd:string" use="optional" />
+        <xsd:attribute name="angle" type="xsd:string" use="optional" />
     </xsd:complexType>
     
     <xsd:complexType name="baseKeys">

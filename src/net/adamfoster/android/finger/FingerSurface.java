@@ -16,14 +16,12 @@ import android.view.SurfaceHolder.Callback;
 
 public class FingerSurface extends SurfaceView implements Callback
 {
-    private SurfaceHolder mSurfaceHolder;
+    //private SurfaceHolder mSurfaceHolder;
     private Instrument mInstrument;
     private Paint mKeyDownPaint;
     private Paint mTrillDownPaint;
     private Paint mTrillUpPaint;
     private Paint mBaseKeyPaint;
-    private Fingering mFingering;
-    
 
     public FingerSurface(Context context)
     {
@@ -72,8 +70,6 @@ public class FingerSurface extends SurfaceView implements Callback
 
     public void drawFingering(Fingering f)
     {
-        mFingering = f;
-        
         Canvas c = null;
         try
         {
@@ -91,14 +87,14 @@ public class FingerSurface extends SurfaceView implements Callback
             
             int w, h; // width, height
             int l, d; // left, down offset
-            float ratio;
+            //float ratio;
             if (canvasRatio > bgRatio) // canvas is wider than image
             {
                 h = c.getHeight();
                 w = (int) (h * bgRatio);
                 l = (c.getWidth() - w) / 2;
                 d = 0;
-                ratio = c.getWidth() / (float) w;
+                //ratio = c.getWidth() / (float) w;
             }
             else // canvas is taller than image
             {
@@ -106,11 +102,18 @@ public class FingerSurface extends SurfaceView implements Callback
                 h = (int) (w / bgRatio);
                 l = 0;
                 d = (c.getHeight() - h) / 2;
-                ratio = c.getHeight() / (float) h;
+                //ratio = c.getHeight() / (float) h;
             }
             bg.setBounds(new Rect(l, d, w+l, h+d));
             bg.draw(c);
          
+            /*
+            c.drawOval(new RectF(30, 30, 70, 150), mTrillUpPaint);
+            c.rotate(45, 100, 90);
+            c.drawOval(new RectF(80, 30, 120, 150), mTrillDownPaint);
+            c.rotate(-45, 100, 90);
+            c.drawOval(new RectF(130, 30, 170, 150), mKeyDownPaint);
+            // */
             
             // outlines
             for (BaseKey bk : mInstrument.baseKeys)
@@ -184,6 +187,17 @@ public class FingerSurface extends SurfaceView implements Callback
                         imgBounds.left + imgBounds.width()*bk.positionx + bk.width*scale, 
                         imgBounds.top + imgBounds.height()*bk.positiony + bk.height*scale, 
                         p);
+                break;
+            case BaseKey.TYPE_OVAL:
+                c.rotate(bk.angle, imgBounds.left + imgBounds.width()*bk.positionx, imgBounds.top + imgBounds.height()*bk.positiony);
+                c.drawOval(new RectF(
+                        imgBounds.left + imgBounds.width()*bk.positionx - bk.width*scale, 
+                        imgBounds.top + imgBounds.height()*bk.positiony - bk.height*scale, 
+                        imgBounds.left + imgBounds.width()*bk.positionx + bk.width*scale, 
+                        imgBounds.top + imgBounds.height()*bk.positiony + bk.height*scale
+                    ), p);
+                
+                c.rotate(-bk.angle, imgBounds.left + imgBounds.width()*bk.positionx, imgBounds.top + imgBounds.height()*bk.positiony);
                 break;
             case BaseKey.TYPE_ROUNDRECT:
                 // FIX c.drawRoundRect(new RectF(c.getWidth()*bk.positionx, c.getHeight()*bk.positiony, c.getWidth()*bk.positionx+bk.width, c.getHeight()*bk.positiony+bk.height), bk.rx, bk.ry, p);
@@ -278,6 +292,17 @@ public class FingerSurface extends SurfaceView implements Callback
                         imgBounds.left + imgBounds.width()*bk.positionx + bk.width*scale, 
                         imgBounds.top + imgBounds.height()*bk.positiony + bk.height*scale, 
                         p);
+                break;
+            case BaseKey.TYPE_OVAL:
+                c.rotate(bk.angle, imgBounds.left + imgBounds.width()*bk.positionx, imgBounds.top + imgBounds.height()*bk.positiony);
+                c.drawOval(new RectF(
+                        imgBounds.left + imgBounds.width()*bk.positionx - bk.width*scale, 
+                        imgBounds.top + imgBounds.height()*bk.positiony - bk.height*scale, 
+                        imgBounds.left + imgBounds.width()*bk.positionx + bk.width*scale, 
+                        imgBounds.top + imgBounds.height()*bk.positiony + bk.height*scale
+                    ), p);
+                
+                c.rotate(-bk.angle, imgBounds.left + imgBounds.width()*bk.positionx, imgBounds.top + imgBounds.height()*bk.positiony);
                 break;
             case BaseKey.TYPE_ROUNDRECT:
                 // FIX c.drawRoundRect(new RectF(c.getWidth()*bk.positionx, c.getHeight()*bk.positiony, c.getWidth()*bk.positionx+bk.width, c.getHeight()*bk.positiony+bk.height), bk.rx, bk.ry, p);

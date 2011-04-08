@@ -3,7 +3,7 @@
       package="net.adamfoster.android.finger"
       android:versionCode="1"
       android:versionName="1.0">
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" / --><!-- Only needed temporarily for export -->
     <application android:icon="@drawable/hands" android:label="@string/app_name">
         <activity android:name=".Chart"
                   android:label="@string/app_name"

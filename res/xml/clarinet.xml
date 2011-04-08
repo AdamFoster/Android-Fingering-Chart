@@ -2,13 +2,656 @@
 <ins:instrument xmlns:ins="http://www.adamfoster.net/instrument" 
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
     xsi:schemaLocation="http://www.adamfoster.net/instrument instrument.xsd "
-    name="Flute" image="@drawable/flutedark" >
+    name="Clarinet" image="@drawable/clarinet" >
   <ins:baseKeys>
-    <ins:baseKey/>
+    <!-- Left Hand -->
+    <ins:baseKey name="R" positionx="0.280" positiony="0.200" width="0.008" height="0.014" type="oval" />
+    <ins:baseKey name="T" positionx="0.280" positiony="0.230" radius="0.01" type="circle" />
+    <ins:baseKey name="L-A" positionx="0.477" positiony="0.252" width="0.011" height="0.015" type="oval" />
+    <ins:baseKey name="L-G#" positionx="0.580" positiony="0.251" width="0.014" height="0.02" type="rectangle" />
+    <ins:baseKey name="L-1" positionx="0.466" positiony="0.290" radius="0.012" type="circle" />
+    <ins:baseKey name="L-2" positionx="0.475" positiony="0.360" radius="0.012" type="circle" />
+    <ins:baseKey name="L-Eb" positionx="0.440" positiony="0.383" width="0.03" height="0.01" type="rectangle" />
+    <ins:baseKey name="L-3" positionx="0.488" positiony="0.411" radius="0.012" type="circle" />
+    <ins:baseKey name="L-C#" positionx="0.540" positiony="0.424" width="0.02" height="0.012" type="rectangle" />
+    <ins:baseKey name="L-F" positionx="0.624" positiony="0.442" width="0.015" height="0.01" type="rectangle" />
+    <ins:baseKey name="L-F#" positionx="0.687" positiony="0.468" width="0.01" height="0.02" type="rectangle" />
+    <ins:baseKey name="L-E" positionx="0.609" positiony="0.475" width="0.015" height="0.015" type="rectangle" />
+    <ins:baseKey name="L2-G#" positionx="0.645" positiony="0.519" radius="0.006" type="circle" />
+    
+    <!-- Right hand -->
+    <ins:baseKey name="RT-1" positionx="0.248" positiony="0.428" width="0.009" height="0.006" type="oval" />
+    <ins:baseKey name="RT-2" positionx="0.248" positiony="0.450" width="0.009" height="0.006" type="oval" />
+    <ins:baseKey name="RT-3" positionx="0.270" positiony="0.466" width="0.009" height="0.006" type="oval" />
+    <ins:baseKey name="RT-4" positionx="0.270" positiony="0.487" width="0.009" height="0.006" type="oval" />
+    <ins:baseKey name="R-1" positionx="0.486" positiony="0.537" radius="0.014" type="circle" />
+    <ins:baseKey name="R-2" positionx="0.489" positiony="0.592" radius="0.014" type="circle" />
+    <ins:baseKey name="R-B" positionx="0.405" positiony="0.612" width="0.025" height="0.01" type="rectangle" />
+    <ins:baseKey name="R-3" positionx="0.489" positiony="0.643" radius="0.014" type="circle" />
+    <ins:baseKey name="R-F#" positionx="0.270" positiony="0.670" radius="0.007" type="circle" />
+    <ins:baseKey name="R-G#" positionx="0.340" positiony="0.680" height="0.007" width="0.013" angle="20.0" type="oval" />
+    <ins:baseKey name="R-E" positionx="0.250" positiony="0.690" radius="0.007" type="circle" />
+    <ins:baseKey name="R-F" positionx="0.320" positiony="0.700" height="0.007" width="0.013" angle="20.0" type="oval" />
+    
+    
   </ins:baseKeys>
-  <ins:set>
-    <ins:note>
-      <ins:fingering/>
+  <ins:set name="Notes">
+
+    <!-- Chalumeau Register: E3 to B4 -->
+    <ins:note name="E3 / Fb3">
+      <ins:fingering name="Left" comment="Use in combination with fingerings using right little finger or no little fingers" keysDown="T,L-1,L-2,L-3,L-E,R-1,R-2,R-3"/>
+      <ins:fingering name="Right" comment="Use in combination with fingerings using left little finger or no little fingers" keysDown="T,L-1,L-2,L-3,R-1,R-2,R-3,R-E"/>
+      <ins:fingering name="F3/C5" comment="Use in combination with F3 or C5" keysDown="T,L-1,L-2,L-3,L-E,R-1,R-2,R-3,R-F"/>
+    </ins:note>
+    <ins:note name="E#3 / F3">
+      <ins:fingering name="Left" comment="Use in combination with fingerings using right little finger or no little fingers" keysDown="T,L-1,L-2,L-3,L-F,R-1,R-2,R-3"/>
+      <ins:fingering name="Right" comment="Use in combination with fingerings using left little finger or no little fingers" keysDown="T,L-1,L-2,L-3,R-1,R-2,R-3,R-F"/>
+    </ins:note>
+    <ins:note name="F#3 / Gb3">
+      <ins:fingering name="Left" comment="Use in combination with fingerings using right little finger or no little fingers" keysDown="T,L-1,L-2,L-3,L-F#,R-1,R-2,R-3"/>
+      <ins:fingering name="Right" comment="Use in combination with fingerings using left little finger or no little fingers" keysDown="T,L-1,L-2,L-3,R-1,R-2,R-3,R-F#"/>
+      <ins:fingering name="F3/C5" comment="Use in combination with F3 or C5" keysDown="T,L-1,L-2,L-3,L-F#,R-1,R-2,R-3,R-F"/>
+    </ins:note>
+    <ins:note name="G3">
+      <ins:fingering name="Basic" comment="Basic" keysDown="T,L-1,L-2,L-3,R-1,R-2,R-3"/>
+    </ins:note>
+    <ins:note name="G#3 / Ab3">
+      <ins:fingering name="Basic" comment="Basic" keysDown="T,L-1,L-2,L-3,R-1,R-2,R-3,R-G#"/>
+      <ins:fingering name="LH-G" comment="For models with LH G#-key, use in combination with fingerings using right little finger or no little fingers." keysDown="T,L-1,L-2,L-3,L2-G#,R-1,R-2,R-3"/>
+    </ins:note>
+    <ins:note name="A3">
+      <ins:fingering name="Basic" comment="Basic" keysDown="T,L-1,L-2,L-3,R-1,R-2"/>
+    </ins:note>
+    <ins:note name="A#3 / Bb3">
+      <ins:fingering name="Basic" comment="Basic" keysDown="T,L-1,L-2,L-3,R-1"/>
+    </ins:note>
+    <ins:note name="B3 / Cb4">
+      <ins:fingering name="Basic" comment="Basic" keysDown="T,L-1,L-2,L-3,R-2"/>
+      <ins:fingering name="Basic" comment="Chromatic, use in combination with Bb3 or F4" keysDown="T,L-1,L-2,L-3,R-1,R-B"/>
+    </ins:note>
+    <ins:note name="B#3 / C4">
+      <ins:fingering name="Basic" comment="Basic" keysDown="T,L-1,L-2,L-3"/>
+    </ins:note>
+    <ins:note name="C#4 / Db4">
+      <ins:fingering name="Basic" comment="Basic" keysDown="T,L-1,L-2,L-3,L-C#"/>
+    </ins:note>
+    <ins:note name="D4">
+      <ins:fingering name="Basic" comment="Basic" keysDown="T,L-1,L-2"/>
+    </ins:note>
+    <ins:note name="D#4 / Eb4">
+      <ins:fingering name="Basic" comment="Basic" keysDown="T,L-1,L-2,RT-4"/>
+      <ins:fingering name="Chromatic" comment="Chromatic and trill fingering, use in combination with D4 and A5" keysDown="T,L-1,L-2,L-Eb"/>
+      <ins:fingering name="RH1" comment="Sharp, use for facility in combination with fingerings involving RH 1" keysDown="T,L-1,R-1"/>
+      <ins:fingering name="RH2" comment="Sharp, use for facility in combination with fingerings involving RH 2" keysDown="T,L-1,R-2"/>
+      <ins:fingering name="7-Ring" comment="For 7-ring models, use in combination with C4" keysDown="T,L-1,L-3"/>
+    </ins:note>
+    <ins:note name="E4 / Fb4">
+      <ins:fingering name="Basic" comment="Basic" keysDown="T,L-1"/>
+      <ins:fingering name="Rounnd" comment="Rounder and lower in pitch than basic fingering" keysDown="T,L-1,L-Eb,RT-4,R-3,R-F"/>
+      <ins:fingering name="Long" comment="Produces louder, clear sound, especially useful for long notes" keysDown="T,L-1,L-Eb,L-C#,RT-4,R-1,R-2,R-3,R-F"/>
+    </ins:note>
+    <ins:note name="E#4 / F4">
+      <ins:fingering name="Basic" comment="Basic" keysDown="T"/>
+    </ins:note>
+    <ins:note name="F#4 / Gb4">
+      <ins:fingering name="Basic" comment="Try using RH-1,2,3 in different conbinations for better intonation and tone" keysDown="L-1"/>
+      <ins:fingering name="Chromatic" comment="Chromatic, use in combination with F4. Try using RH-1,2,3 in different conbinations for better intonation and tone" keysDown="T,RT-3,RT-4"/>
+    </ins:note>
+    <ins:note name="G4">
+      <ins:fingering name="Basic" comment="Basic. Try using RH-1,2,3 in different conbinations for better intonation and tone" keysDown=""/>
+    </ins:note>
+    <ins:note name="G#4 / Ab4">
+      <ins:fingering name="Basic" comment="Basic. Try different RH combinations for better intonation and tone" keysDown="L-G#"/>
+      <ins:fingering name="F4" comment="Use in combination with F4. Try different RH combinations for better intonation and tone" keysDown="T,L-G#,RT-3,RT-4"/>
+      <ins:fingering name="Flat" comment="Flatter" keysDown="L-G#,L-2,L-3,RT-4,R-1"/>
+      <ins:fingering name="Sharp" comment="Use in combination with E4. G4 is sharp" keysDown="T,L-1,RT-2"/>
+    </ins:note>
+    <ins:note name="A4">
+      <ins:fingering name="Basic" comment="Basic. Try using RH-1,2,3 in different conbinations for better intonation and tone" keysDown="L-A"/>
+      <ins:fingering name="Full" comment="Fuller sound without sounding airy" keysDown="L-A,R-2,R-3,R-F"/>
+      <ins:fingering name="Flat" comment="Flatter" keysDown="L-A,L-2,L-3,R-2,R-3,R-F"/>
+    </ins:note>
+    <ins:note name="A#4 / Bb4">
+      <ins:fingering name="Basic" comment="Basic. Try different RH combinations for better intonation and tone." keysDown="R,L-A"/>
+      <ins:fingering name="Trill-A4" comment="Trill fingering with A4. Try different RH combinations for better intonation and tone." keysDown="L-A,RT-2"/>
+      <ins:fingering name="Alt1" comment="Better in tune and clearer than basic fingering" keysDown="R,L-A,L-3,R-1,R-3,R-F"/>
+      <ins:fingering name="Alt2" comment="Better in tune and clearer than basic fingering" keysDown="R,L-A,L-3,L-F,R-1,R-3"/>
+      <ins:fingering name="Alt3" comment="Good intonation and smooth transitions with other notes" keysDown="R,L-A,L-1,L-2,L-3,R-2,R-3"/>
+      <ins:fingering name="Alt4" comment="Fuller sound; in tune; less awkward" keysDown="R,L-A,L-2,L-3,R-2,R-3,R-F"/>
+      <ins:fingering name="Alt5" comment="In tune and fuller, less airy sound" keysDown="R,L-A,L-3,R-3,R-F"/>
+    </ins:note>
+
+    <!-- Clarion Register -->
+    <ins:note name="-- Clarion Register --">
+        <ins:fingering name="B4-C6" comment="" />
+    </ins:note>
+    
+    <ins:note name="B4 / Cb5">
+      <ins:fingering name="Left" comment="Use in combination with fingerings using right little finger or no little fingers" keysDown="R,T,L-1,L-2,L-3,L-E,R-1,R-2,R-3"/>
+      <ins:fingering name="Right" comment="Use in combination with fingerings using left little finger or no little fingers" keysDown="R,T,L-1,L-2,L-3,R-1,R-2,R-3,R-E"/>
+      <ins:fingering name="C5" comment="Use in combination with C5" keysDown="R,T,L-1,L-2,L-3,L-E,R-1,R-2,R-3,R-F"/>
+      <ins:fingering name="TrillA4" comment="Trill fingering with A4" keysDown="L-A,RT-1"/>
+      <ins:fingering name="TrillBb4" comment="Trill fingering with Bb4" keysDown="R,L-A,RT-2"/>
+      <ins:fingering name="Alt1" comment="Suitable for sustained notes.  Gives a more open sound than basic fingering" keysDown="R,T,L-A,L-1,L-2,L-3,L-E,R-1,R-2,R-3"/>
+      <ins:fingering name="Alt2" comment="Suitable for sustained notes.  Gives a more open sound than basic fingering" keysDown="R,T,L-A,L-1,L-2,L-3,R-1,R-2,R-3,R-E"/>
+      <ins:fingering name="Alt3" comment="Suitable for sustained notes.  Gives a more open sound than basic fingering" keysDown="R,T,L-A,L-1,L-2,L-3,L-E,R-1,R-2,R-3,R-F"/>
+    </ins:note>
+    <ins:note name="B#4 / C5">
+      <ins:fingering name="Left" comment="Use in combination with fingerings using right little finger or no little fingers" keysDown="R,T,L-1,L-2,L-3,L-F,R-1,R-2,R-3"/>
+      <ins:fingering name="Right" comment="Use in combination with fingerings using left little finger or no little fingers" keysDown="R,T,L-1,L-2,L-3,R-1,R-2,R-3,R-F"/>
+      <ins:fingering name="TrillBb4" comment="Trill fingering with Bb4" keysDown="R,L-A,RT-1"/>
+      <ins:fingering name="TuneBb4" comment="Trill fingering with Bb4 which is more in tune" keysDown="R,L-A,RT-1,RT-2"/>
+    </ins:note>
+    <ins:note name="C#5 / Db5">
+      <ins:fingering name="Left" comment="Use in combination with fingerings using right little finger or no little fingers" keysDown="R,T,L-1,L-2,L-3,L-F#,R-1,R-2,R-3"/>
+      <ins:fingering name="Right" comment="Use in combination with fingerings using left little finger or no little fingers" keysDown="R,T,L-1,L-2,L-3,R-1,R-2,R-3,R-F#"/>
+      <ins:fingering name="C5" comment="Use in combination with C5" keysDown="R,T,L-1,L-2,L-3,L-F#,R-1,R-2,R-3,R-F"/>
+    </ins:note>
+    <ins:note name="D5">
+      <ins:fingering name="Basic" comment="Basic" keysDown="R,T,L-1,L-2,L-3,R-1,R-2,R-3"/>
+    </ins:note>    
+    <ins:note name="D#5 / Eb5">
+      <ins:fingering name="Basic" comment="Basic" keysDown="R,T,L-1,L-2,L-3,R-1,R-2,R-3,R-G#"/>
+      <ins:fingering name="LH-G#" comment="For models with LH G# key, use in combination with fingerings using right little finger or no little fingers" keysDown="R,T,L-1,L-2,L-3,L2-G#,R-1,R-2,R-3,R"/>
+    </ins:note>    
+    <ins:note name="E5 / Fb5">
+      <ins:fingering name="Basic" comment="Basic" keysDown="R,T,L-1,L-2,L-3,R-1,R-2"/>
+    </ins:note>    
+    <ins:note name="E#5 / F5">
+      <ins:fingering name="Basic" comment="Basic" keysDown="R,T,L-1,L-2,L-3,R-1"/>
+    </ins:note>    
+    <ins:note name="F#5 / Gb5">
+      <ins:fingering name="Basic" comment="Basic" keysDown="R,T,L-1,L-2,L-3,R-2"/>
+      <ins:fingering name="Chromatic" comment="Chromatic, use in combination with Bb4 or F5" keysDown="R,T,L-1,L-2,L-3,R-B"/>
+      <ins:fingering name="WithD5" comment="Use in combination with D5" keysDown="R,T,L-1,L-2,L-3,R-3"/>
+    </ins:note>    
+    <ins:note name="G5">
+      <ins:fingering name="Basic" comment="Basic" keysDown="R,T,L-1,L-2,L-3"/>
+    </ins:note>    
+    <ins:note name="G#5 / Ab5">
+      <ins:fingering name="Basic" comment="Basic" keysDown="R,T,L-1,L-2,L-3,L-C#"/>
+      <ins:fingering name="RH" comment="Use in combination with fingerings involving the right hand fingers" keysDown="R,T,L-1,L-2,R-1,R-2"/>
+    </ins:note>    
+    <ins:note name="A5">
+      <ins:fingering name="Basic" comment="Basic" keysDown="R,T,L-1,L-2"/>
+    </ins:note>    
+    <ins:note name="A#5 / Bb5">
+      <ins:fingering name="Basic" comment="Basic" keysDown="R,T,L-1,L-2,RT-4"/>
+      <ins:fingering name="Chromatic" comment="Chromatic and trill fingering, use in combination with D4 and A5" keysDown="R,T,L-1,L-2,L-Eb"/>
+      <ins:fingering name="Trill" comment="Trill fingering with Ab5" keysDown="R,T,L-1,L-2,L-C#"/>
+      <ins:fingering name="RH-1" comment="Use in combination with fingerings involving RH 1" keysDown="R,T,L-1,R-1"/>
+      <ins:fingering name="Sharp" comment="Sharp, use for facility in combination with fingerings involving RH 2" keysDown="R,T,L-1,R-2"/>
+      <ins:fingering name="7-ring" comment="For 7-ring models. Use in combination with G5" keysDown="R,T,L-1,L-3"/>
+      <ins:fingering name="ppp" comment="For ppp entrances" keysDown="R,T,L-1,L-3,R-1,R-2,R-3,R-F"/>
+    </ins:note>    
+    <ins:note name="B5 / Cb6">
+      <ins:fingering name="Basic" comment="Basic" keysDown="R,T,L-1"/>
+      <ins:fingering name="Alt1" comment="Use in combination with lower altissimo notes" keysDown="R,T,L-2,L-3,L-F#,R-1,R-2,R-3"/>
+    </ins:note>    
+    <ins:note name="B#5 / C6">
+      <ins:fingering name="Basic" comment="Basic" keysDown="R,T"/>
+      <ins:fingering name="pp-D5" comment="Useful for pp attacks and upward skips from D5" keysDown="R,T,L-3,RT-4,R-1,R-2,R-3"/>
+      <ins:fingering name="pp-interval" comment="Suitable for large interval skips, such as with D5, and for pp" keysDown="R,T,R-1,R-2,R-3"/>
+      <ins:fingering name="sharp-ff" comment="Slightly sharp. Good for ff. Useful in combination with Bb5" keysDown="R,T,L-1,L-2,L-Eb,RT-3,RT-4"/>
+      <ins:fingering name="LegatoD6" comment="For legato slurring from D6" keysDown="R,T,L-1,L-2,L-3,R-1,R-2,R-3,R-G#"/>
+      <ins:fingering name="ff1" comment="Good intonation and good for ff" keysDown="R,T,L-2,L-3,R-1,R-2,R-3"/>
+      <ins:fingering name="ff2" comment="Good intonation and good for ff" keysDown="R,T,L-2,L-3,R-1,R-2,R-3,R-G#"/>
+      <ins:fingering name="Bass" comment="For bass clarinet. Use in combination with C6, D6, and E6" keysDown="R,T,L-0,L-3,R-1,R-2,R-3,R-G#"/>
+    </ins:note>    
+    
+    <!-- Lower Altissimo Register -->
+    <ins:note name="-- Lower Altissimo Register --">
+        <ins:fingering name="C#6 - G6" comment="" />
+    </ins:note>
+    
+    <ins:note name="B5 / Cb6">
+      <ins:fingering name="Basic" comment="Basic" keysDown="R,T,L-2,L-3,R-1,R-2"/>
+      <ins:fingering name="TrillC6" comment="" keysDown="R,T,RT-3,RT-4"/>
+      <ins:fingering name="TrillB5" comment="" keysDown="R,T,L-1,RT-4"/>
+      <ins:fingering name="HarmonicF#" comment="Harmonic F#4" keysDown="L-1"/>
+      <ins:fingering name="HarmonicE" comment="Harmonic E5" keysDown="R,T,L-G#,L-1,L-2,L-3,R-1,R-2,R-G#"/>
+      <ins:fingering name="Full" comment="Full sound and great response at pp" keysDown="R,L-1,L-2,L-3,R-1,R-2,R-G#"/>
+    </ins:note>    
+    <ins:note name="D6">
+      <ins:fingering name="Basic" comment="Basic" keysDown="R,T,L-2,L-3,R-1,R-G#"/>
+      <ins:fingering name="TrillC1" comment="Trill fingering with C6" keysDown="R,T,RT-2"/>
+      <ins:fingering name="TrillC2" comment="Less flat, trill fingering with C6" keysDown="R,T,L-G#,RT-4"/>
+      <ins:fingering name="TrillC3" comment="Trill fingering with C6" keysDown="R,T,L-G#"/>
+      <ins:fingering name="HarmonicG" comment="Harmonic (G4)" keysDown="R,T,R-G#"/>
+      <ins:fingering name="Ful" comment="Full tone, good intonation, and great response at pp" keysDown="R,T,L-G#,L-2,L-3,R-1,R-2"/>
+      <ins:fingering name="Secure" comment="Secure at pp, useful for wide interval leaps" keysDown="R,L-1,L-2,L-3,R-1,R-3,R-G#"/>
+      <ins:fingering name="mf-ff" comment="Good intonation and response. Works well at mf to ff dynamics" keysDown="R,T,L-2,L-3,R-2,R-3,R-G#"/>
+    </ins:note>    
+    <ins:note name="D#6 / Eb6">
+      <ins:fingering name="Basic" comment="Basic" keysDown="R,T,L-2,L-3,R-1,R-B,R-G#"/>
+      <ins:fingering name="Lower" comment="Use in combination with lower clarion notes" keysDown="R,T,L-2,L-3,R-3,R-G#"/>
+      <ins:fingering name="Flat" comment="Flat, use for facility, trill fingering with C#6" keysDown="R,T,L-2,L-3,R-2,R-G#"/>
+      <ins:fingering name="HarmonicA" comment="Harmonic (flat A4)" keysDown="R,T,L-A,R-G#"/>
+      <ins:fingering name="Dark" comment="Dark, covered sound. Great for pp passages" keysDown="R,L-1,L-2,L-3,R-2,R-G#"/>
+    </ins:note>    
+    <ins:note name="E6 / Fb6">
+      <ins:fingering name="Basic" comment="Basic" keysDown="R,T,L-2,L-3,R-G#"/>
+      <ins:fingering name="Alt1" comment="Basic" keysDown="R,T,L-G#,L-2,L-3"/>
+      <ins:fingering name="Alt2" comment="Basic" keysDown="R,L-1,L-2,L-3,R-G#"/>
+    </ins:note>    
+    <ins:note name="E#6 / F6">
+      <ins:fingering name="Basic" comment="Basic" keysDown="R,T,L-2,L-3,L-C#,R-G#"/>
+      <ins:fingering name="pp" comment="Use for slurring with lower registers and for pp" keysDown="R,T,L-1,L-2,L-3,L-C#,R-1,R-2,R-3"/>
+      <ins:fingering name="LH-Only" comment="Useful for wide interval skips with any LH-only fingering. Quick response" keysDown="R,T,L-1,L-2,L-3,L-C#,RT-2,R-G#"/>
+      <ins:fingering name="ff" comment="Easy to finger (LH only). Free blowing and good for ff" keysDown="R,T,L-A,L-1,L-2,L-3,L-C#"/>
+      <ins:fingering name="Alt" comment="" keysDown="R,T,L-G#,L-2,L-3,L-C#,R-G#"/>
+    </ins:note>    
+    <ins:note name="F#6 / Gb6">
+      <ins:fingering name="Basic" comment="Basic" keysDown="R,T,L-2,R-G#"/>
+      <ins:fingering name="Slurs" comment="Use for slurs with lower registers, more stable, good for pp and ff" keysDown="R,T,L-1,L-2,R-1,R-2,R-3,R-G#"/>
+      <ins:fingering name="Speaks" comment="Accurate pitch. Speaks easily in all dynamics. Good for wide skips" keysDown="R,T,L-1,L-2,RT-4,R-G#"/>
+      <ins:fingering name="Alt1" comment="" keysDown="R,T,L-2,R-2,R-F#"/>
+      <ins:fingering name="mf-ff" comment="Stable. Use at mf to ff dynamics" keysDown="R,T,L-2,R-B,R-G#"/>
+      <ins:fingering name="pp" comment="Stable. Use in slurs from lower registers. Good for pp" keysDown="R,T,L-1,L-2,RT-1,R-G#"/>
+      <ins:fingering name="Alt2" comment="" keysDown="R,T,L-2,L-3,R-1,R-2,R-3,R-G#"/>
+      <ins:fingering name="Alt3" comment="" keysDown="R,T,L-1,R-2,R-3,R-F"/>
+      <ins:fingering name="Alt4" comment="" keysDown="R,T,L-1,L-2,L-3,R-2,R-3,R-G#"/>
+      <ins:fingering name="Chromatic" comment="Use for fast chromatic passages between E6 and G#6" keysDown="R,T,L-2,L-3,L-C#,RT-3,R-G#"/>
+    </ins:note>    
+    <ins:note name="G6">
+      <ins:fingering name="Basic" comment="Basic" keysDown="R,T,L-2,R-1,R-2,R-G#"/>
+      <ins:fingering name="Clarion" comment="Use for slurs from clarion notes" keysDown="R,T,L-1,R-1,R-2,R-G#"/>
+      <ins:fingering name="Alt1" comment="" keysDown="R,T,L-1,R-1,R-G#"/>
+      <ins:fingering name="Sharp" comment="Sharper than basic fingering" keysDown="R,T,L-1,R-1,R-F#"/>
+      <ins:fingering name="Alt2" comment="" keysDown="R,T,L-1,R-1,R-2,R-G#"/>
+      <ins:fingering name="SlurD6" comment="For quick slurs with D6" keysDown="R,T,L-1,R-G#"/>
+      <ins:fingering name="TrillF6" comment="Trill fingering with F6" keysDown="R,T,L-3,L-C#,R-F#"/>
+      <ins:fingering name="HarmonicC" comment="Harmonic (C#6)" keysDown="R,T,L-2,L-3,R-1,R-2,R-G#"/>
+      <ins:fingering name="Secure" comment="More secure than without LH C# key" keysDown="R,T,L-2,L-3,L-C#,R-1,R-2,R-G#"/>
+      <ins:fingering name="Alt3" comment="" keysDown="R,T,L-2,L-3,R-1,R-2,R-3,R-F"/>
+      <ins:fingering name="Alt4" comment="" keysDown="R,T,L-2,R-1,R-3,R-G#"/>
+      <ins:fingering name="Alt5" comment="" keysDown="R,T,L-2,L-Eb,R-G#"/>
+      <ins:fingering name="TrillF#6" comment="Trill fingering with F#6" keysDown="R,T,L-2,RT-4,R-G#"/>
+      <ins:fingering name="Alt6" comment="" keysDown="R,T,L-2,RT-4,RT-B"/>
+      <ins:fingering name="Alt7" comment="" keysDown="R,T,L-3,L-C#,R-G#"/>
+      <ins:fingering name="WithF#6" comment="Use in combination with F#6 (RT 12-|123G#)" keysDown="R,T,L-1,R-1,R-2,R-3,R-G#"/>
+      <ins:fingering name="Chromatic" comment="Use for fast chromatic passages between E6 and G#6" keysDown="R,T,L-2,L-C#,RT-3,R-G#"/>
+    </ins:note>    
+    
+    <!-- Upper Altissimo Register -->
+    <ins:note name="-- Upper Altissimo Register --">
+        <ins:fingering name="G#6 - A7" comment="" />
+    </ins:note>
+    
+    <ins:note name="G#6 / Ab6">
+      <ins:fingering name="Alt1" comment="" keysDown="R,T,L-2,L-3,L-F#,R-1,R-3"/>
+      <ins:fingering name="Alt2" comment="" keysDown="R,T,L-2,L-3,R-1,R-3,R-F#"/>
+      <ins:fingering name="Response" comment="Responds well at all dynamics with accurate pitch" keysDown="R,T,RT-4,R-G#"/>
+      <ins:fingering name="Easy" comment="Easy to finger in all contexts with excellent tuning. Top note of Ab arpeggio with basic Eb6 fingering" keysDown="R,T,R-1,R-G#"/>
+      <ins:fingering name="ff" comment="Good response at ff and accurate pitch" keysDown="R,L-1,R-1,R-2,R-G#"/>
+      <ins:fingering name="Alt3" comment="" keysDown="R,T,L-2,L-3,R-2,R-F"/>
+      <ins:fingering name="Alt4" comment="" keysDown="R,T,L-2,L-3,L-F,R-2"/>
+      <ins:fingering name="Alt5" comment="" keysDown="R,T,L-2,L-3,R-B,R-G#"/>
+      <ins:fingering name="Alt6" comment="" keysDown="R,T,L-2,L-3,R-1,R-F#"/>
+      <ins:fingering name="Alt7" comment="" keysDown="R,T,L-2,L-3,L-F#,R-1"/>
+      <ins:fingering name="Alt8" comment="" keysDown="R,T,L-2,R-2,R-G#"/>
+      <ins:fingering name="Alt9" comment="" keysDown="R,T,L-2,RT-3,RT-4"/>
+      <ins:fingering name="Alt10" comment="" keysDown="R,T,L-3,L-C#,RT-1,RT-2"/>
+      <ins:fingering name="Alt11" comment="" keysDown="R,T,L-3,L-C#,RT-1,RT-2,R-G#"/>
+      <ins:fingering name="Alt12" comment="" keysDown="R,T,L-3,R-1,R-G#"/>
+      <ins:fingering name="Sharp" comment="Sharper" keysDown="R,T,L-3,R-1,R-F#"/>
+      <ins:fingering name="Alt" comment="" keysDown="R,T,L-G#,L-1,R-3,R-G#"/>
+      <ins:fingering name="Chromatic" comment="Use for fast chromatic passages between E6 and G#6" keysDown="R,T,R-C#,RT-3,R-G#"/>
+    </ins:note>    
+
+    <ins:note name="A6">
+      <ins:fingering name="Alt1" comment="" keysDown="R,T,L-2,L-3,R-F"/>
+      <ins:fingering name="Alt2" comment="" keysDown="R,T,L-2,L-3,L-F"/>
+      <ins:fingering name="Alt3" comment="" keysDown="R,T,L-2,L-3,R-F#"/>
+      <ins:fingering name="Alt4" comment="" keysDown="R,T,L-2,L-3,L-F#"/>
+      <ins:fingering name="Alt5" comment="" keysDown="R,T,L-2,L-3,RT-4,R-F#"/>
+      <ins:fingering name="Alt6" comment="" keysDown="R,T,L-2,L-3,L-F#,RT-4"/>
+      <ins:fingering name="Alt7" comment="" keysDown="R,T,L-G#,L-2,L-3,L-C#,R-2,R-3,R-F#"/>
+      <ins:fingering name="Alt8" comment="" keysDown="R,T,L-G#,L-2,L-3,RT-1,RT-2,R-2,R-F#"/>
+      <ins:fingering name="Alt9" comment="Responds quickly and in tune" keysDown="R,L-2,L-3,R-1,R-3,R-F#"/>
+      <ins:fingering name="Alt10" comment="Responds quickly and in tune" keysDown="R,R-1,R-2,R-F#"/>
+    </ins:note>
+
+    <ins:note name="A#6 / Bb6">
+      <ins:fingering name="Alt1" comment="" keysDown="R,T,L-G#,L-2,L-3,L-C#,R-G#"/>
+      <ins:fingering name="Alt2" comment="" keysDown="R,T,L-G#,L-2,L-3,L-C#,R-F#"/>
+      <ins:fingering name="Alt3" comment="" keysDown="R,T,L-G#,L-2,L-3,R-F#"/>
+      <ins:fingering name="Alt4" comment="Good intonation, easy response" keysDown="R,T,L-G#,L-2,L-3,L-C#,RT-3,RT-4"/>
+      <ins:fingering name="Alt5" comment="" keysDown="R,T,L-1,L-2,L-3,L-C#,R-1,R-2,R-3,R-F"/>
+      <ins:fingering name="Alt6" comment="" keysDown="R,T,L-1,L-2,L-3,L-C#,R-1,R-2,R-3,R-G#"/>
+      <ins:fingering name="Alt7" comment="" keysDown="R,T,L-1,L-2,L-3,L-F,R-1,R-2,R-3,R-G#"/>
+      <ins:fingering name="Alt8" comment="Sharper" keysDown="R,T,L-G#,L-1,L-2,L-3,L-F,R-1,R-2,R-3,R-G#"/>
+      <ins:fingering name="Alt9" comment="" keysDown="R,T,L-1,L-2,L-3,R-1,R-2,R-3,R-F"/>
+      <ins:fingering name="Alt10" comment="" keysDown="R,T,L-1,L-2,L-3,L-F,R-1,R-2,R-3"/>
+      <ins:fingering name="Alt11" comment="" keysDown="R,T,L-2,L-3,L-C#,R-1,R-2,R-3,R-F"/>
+      <ins:fingering name="Alt12" comment="" keysDown=""/>
+      <ins:fingering name="Alt13" comment="Sharper than previous fingering" keysDown="R,L-2"/>
+    </ins:note>
+    <ins:note name="B6 / Cb7">
+      <ins:fingering name="Alt1" comment="" keysDown="R,T,L-G#,L-1,L-2,R-1,R-2"/>
+      <ins:fingering name="Alt2" comment="" keysDown="R,T,L-1,L-2,R-1,R-2,R-F#"/>
+      <ins:fingering name="Alt3" comment="" keysDown="R,T,L-1,L-2,L-F,R-1,R-2,R-F#"/>
+      <ins:fingering name="Alt4" comment="" keysDown="R,T,L-G#,L-1,L-2,R-1,R-2,R-F#"/>
+      <ins:fingering name="Alt5" comment="" keysDown="R,T,L-G#,L-1,L-2,L-F#,R-1,R-2,R-G#"/>
+      <ins:fingering name="Alt6" comment="" keysDown="R,T,L-G#,L-1,L-2,L-C#,R-1,R-2,R-G#"/>
+      <ins:fingering name="Alt7" comment="" keysDown="R,T,L-2,L-F#,R-1,R-2,R-G#"/>
+    </ins:note>
+    <ins:note name="B#6 / C7">
+      <ins:fingering name="Alt1" comment="" keysDown="R,T,L-G#,L-1,R-1,R-F#"/>
+      <ins:fingering name="Alt2" comment="" keysDown="R,T,L-G#,L-1,L-F#,R-1"/>
+      <ins:fingering name="Alt3" comment="" keysDown="R,T,L-G#,L-1,L-C#,R-1"/>
+      <ins:fingering name="Alt4" comment="" keysDown="R,T,L-G#,R-1,R-G#"/>
+      <ins:fingering name="Alt5" comment="" keysDown="R,T,L-1,L-C#,R-1,R-G#"/>
+      <ins:fingering name="Alt6" comment="" keysDown="R,T,L-1,R-1,R-F"/>
+      <ins:fingering name="Alt7" comment="" keysDown="R,T,L-1,L-F,R-1"/>
+      <ins:fingering name="Alt8" comment="" keysDown="R,T,L-1,L-F,R-1,R-F#"/>
+      <ins:fingering name="Alt9" comment="" keysDown="R,T,L-1,L-Eb,R-1,R-B,R-G#"/>
+      <ins:fingering name="Alt10" comment="" keysDown="R,T,L-1,R-1,R-G#"/>
+      <ins:fingering name="Alt11" comment="Better response than RT 1--|1--G#" keysDown="R,T,L-A,L-1,R-G#"/>
+      <ins:fingering name="Alt12" comment="" keysDown="R,T,L-A,L-1,R-1,R-G#"/>
+      <ins:fingering name="Alt13" comment="" keysDown="R,T,L-A,L-1,R-1,R-2,R-G#"/>
+    </ins:note>
+    <ins:note name="C#7 / Db7">
+      <ins:fingering name="Alt1" comment="" keysDown="R,T,L-1,L-2,L-3,R-1,R-2,R-3,R-G#"/>
+      <ins:fingering name="Alt2" comment="" keysDown="R,T,L-1,RT-2,RT-3,RT-4,R-1,R-F"/>
+      <ins:fingering name="Alt3" comment="" keysDown="R,T,L-1,L-F,RT-2,RT-3,RT-4,R-1"/>
+      <ins:fingering name="Alt4" comment="" keysDown="R,T,L-G#,L-1,RT-2,RT-3,RT-4,R-1,R-F#"/>
+      <ins:fingering name="Alt5" comment="" keysDown="R,T,L-G#,L-1,L-F#,RT-2,RT-3,RT-4,R-1"/>
+      <ins:fingering name="Alt6" comment="" keysDown="R,T,L-2,L-3,R-2,R-3,R-G#"/>
+    </ins:note>
+    <ins:note name="D7">
+      <ins:fingering name="Alt1" comment="" keysDown="R,T,L-3,R-3,R-G#"/>
+      <ins:fingering name="Alt2" comment="" keysDown="R,T,L-3,RT-3,RT-4"/>
+      <ins:fingering name="Alt3" comment="" keysDown="R,T,L-2,L-3"/>
+      <ins:fingering name="Alt4" comment="" keysDown="R,T,L-2,L-3,R-G#"/>
+      <ins:fingering name="Alt5" comment="" keysDown="R,T,L-1,L-2,L-3,R-1,R-2,R-E"/>
+    </ins:note>
+    <ins:note name="D#7 / Eb7">
+      <ins:fingering name="Alt1" comment="" keysDown="R,T,L-1,L-2,L-3,L-E,R-1,R-2,R-3,R-F"/>
+      <ins:fingering name="Alt2" comment="" keysDown="R,T,L-2,L-3,R-1,R-3"/>
+    </ins:note>
+    <ins:note name="E7 / Fb7">
+      <ins:fingering name="Alt1" comment="" keysDown="R,T,L-1,L-2,R-1,R-2,R-3,R-G#"/>
+      <ins:fingering name="Alt2" comment="" keysDown="R,T,L-1,R-1,R-2,R-3,R-G#"/>
+      <ins:fingering name="Alt3" comment="Responds well with a clear sound. For all dynamics" keysDown="R,T,L-G#,L-1,R-1,R-2,R-3,R-G#"/>
+    </ins:note>
+    <ins:note name="E#7 / F7">
+      <ins:fingering name="Alt1" comment="" keysDown="R,T,L-1,L-2,L-3,R-1,R-2,R-3"/>
+      <ins:fingering name="Alt2" comment="" keysDown="R,T,L-A,L-1,RT-1,RT-2,R-3,R-G#"/>
+    </ins:note>
+    <ins:note name="F#7 / Gb7">
+      <ins:fingering name="Alt1" comment="" keysDown="R,T,L-1,L-2,L-3,R-1,R-2,R-3,R-G#"/>
+      <ins:fingering name="Alt2" comment="" keysDown="R,T,L-2,L-3,R-1,R-3,R-G#"/>
+    </ins:note>
+    <ins:note name="G7">
+      <ins:fingering name="Alt1" comment="" keysDown="R,T,L-1,L-2,R-1,R-2,R-3"/>
+      <ins:fingering name="Alt2" comment="" keysDown="R,T,L-2,L-E,R-2,R-G#"/>
+    </ins:note>
+    <ins:note name="G#7 / Ab7">
+      <ins:fingering name="Alt1" comment="Requires much effort" keysDown="R,T,L-G#,L-2,L-E,R-2,R-G#"/>
+    </ins:note>
+    <ins:note name="A7">
+      <ins:fingering name="Flat" comment="Slightly flat. Good for ff" keysDown="R,T,L-2,L-3,R-G#"/>
+      <ins:fingering name="Sharp" comment="Slightly sharp. Good for mp" keysDown="R,T,L-2,L-3,L-C#,R-G#"/>
+    </ins:note>
+        
+  </ins:set>
+
+
+  <ins:set name="Trills">
+    <ins:note name="E3-F3">
+      <ins:fingering name="LH" comment="" keysDown="T,L-1,L-2,L-3,R-1,R-2,R-3,R-F" keysTrillDown="L-E" />
+      <ins:fingering name="RH" comment="" keysDown="T,L-1,L-2,L-3,L-F,R-1,R-2,R-3" keysTrillDown="R-E" />
+    </ins:note>
+    <ins:note name="E3-F#3 / Fb3-Gb3">
+      <ins:fingering name="LH" comment="" keysDown="T,L-1,L-2,L-3,R-1,R-2,R-3,R-E" keysTrillDown="L-F#" />
+      <ins:fingering name="RH" comment="" keysDown="T,L-1,L-2,L-3,L-E,R-1,R-2,R-3" keysTrillDown="R-F#" />
+    </ins:note>
+    <ins:note name="E#3-F#3 / F3-Gb3">
+      <ins:fingering name="LH" comment="" keysDown="T,L-1,L-2,L-3,R-1,R-2,R-3,R-F" keysTrillDown="L-F#" />
+      <ins:fingering name="RH" comment="" keysDown="T,L-1,L-2,L-3,L-F,R-1,R-2,R-3" keysTrillDown="R-F#" />
+    </ins:note>
+    <ins:note name="F3-G3">
+      <ins:fingering name="LH" comment="" keysDown="T,L-1,L-2,L-3,R-1,R-2,R-3" keysTrillDown="L-F" />
+      <ins:fingering name="RH" comment="" keysDown="T,L-1,L-2,L-3,R-1,R-2,R-3" keysTrillDown="R-F" />
+    </ins:note>
+    <ins:note name="F#3-G3">
+      <ins:fingering name="LH" comment="" keysDown="T,L-1,L-2,L-3,R-1,R-2,R-3" keysTrillDown="L-F#" />
+      <ins:fingering name="RH" comment="" keysDown="T,L-1,L-2,L-3,R-1,R-2,R-3" keysTrillDown="R-F#" />
+    </ins:note>
+    <ins:note name="F#3-G#3 / Gb3-Ab3">
+      <ins:fingering name="Basic" comment="" keysDown="T,L-1,L-2,L-3,L-F#,R-1,R-2,R-3" keysTrillDown="R-G#" />
+    </ins:note>
+    <ins:note name="G3-Ab3">
+      <ins:fingering name="Basic" comment="" keysDown="T,L-1,L-2,L-3,R-1,R-2,R-3" keysTrillDown="R-G#" />
+    </ins:note>
+    <ins:note name="G3-A3">
+      <ins:fingering name="Basic" comment="" keysDown="T,L-1,L-2,L-3,R-1,R-2" keysTrillDown="R-3" />
+    </ins:note>
+    <ins:note name="G#3-A3">
+      <ins:fingering name="Basic" comment="" keysDown="T,L-1,L-2,L-3,R-1,R-2,R-G#" keysTrillDown="R-3" />
+    </ins:note>
+    <ins:note name="G#3-A#3 / Ab3-Bb3">
+      <ins:fingering name="2Finger" comment="" keysDown="T,L-1,L-2,L-3,R-1,R-G#" keysTrillDown="R-2,R-3" />
+      <ins:fingering name="1Finger" comment="" keysDown="T,L-1,L-2,L-3,R-1,R-3,R-G#" keysTrillDown="F-2" />
+    </ins:note>
+    <ins:note name="A3-Bb3">
+      <ins:fingering name="Basic" comment="" keysDown="T,L-1,L-2,L-3,R-1" keysTrillDown="R-2" />
+    </ins:note>
+    <ins:note name="A3-B3">
+      <ins:fingering name="Basic" comment="" keysDown="T,L-1,L-2,L-3,R-2" keysTrillDown="R-1" />
+    </ins:note>
+    <ins:note name="A#3-B3 / Bb3-Cb4">
+      <ins:fingering name="Basic" comment="" keysDown="T,L-1,L-2,L-3,R-1" keysTrillDown="R-B" />
+    </ins:note>
+    <ins:note name="A#3-B#3 / Bb3-C4">
+      <ins:fingering name="Basic" comment="" keysDown="T,L-1,L-2,L-3" keysTrillDown="R-1" />
+    </ins:note>
+    <ins:note name="B3-C4">
+      <ins:fingering name="Alt" comment="" keysDown="T,L-1,L-2,L-3" keysTrillDown="R-2" />
+    </ins:note>
+    <ins:note name="B3-C#4 / Cb4-Db4">
+      <ins:fingering name="Alt1" comment="" keysDown="T,L-1,L-2,L-3,R-2" keysTrillDown="L-C#" />
+      <ins:fingering name="Alt2" comment="" keysDown="T,L-1,L-2,L-3,R-1,R-B" keysTrillDown="L-C#" />
+      <ins:fingering name="Alt3" comment="" keysDown="T,L-1,L-2,L-3,R-3" keysTrillDown="L-C#" />
+    </ins:note>
+    <ins:note name="B33-C#4 / C4-Db4">
+      <ins:fingering name="Basic" comment="" keysDown="T,L-1,L-2,L-3" keysTrillDown="L-C#" />
+    </ins:note>
+    <ins:note name="C4-D4">
+      <ins:fingering name="LH" comment="" keysDown="T,L-1,L-2" keysTrillDown="L-3" />
+      <ins:fingering name="RH" comment="" keysDown="T,L-1,L-2,L-3" keysTrillDown="RT-4" />
+    </ins:note>
+    <ins:note name="C#4-D4">
+      <ins:fingering name="Basic" comment="" keysDown="T,L-1,L-2,L-C#" keysTrillDown="L-3" />
+      <ins:fingering name="Alt1" comment="" keysDown="T,L-1,L-2" keysTrillDown="L-3,L-C#" />
+    </ins:note>
+    <ins:note name="C#4-D#4 / Db4-Eb4">
+      <ins:fingering name="Basic" comment="" keysDown="T,L-1,L-2,L-3,L-C#" keysTrillDown="RT-4" />
+    </ins:note>
+    <ins:note name="D4-Eb4">
+      <ins:fingering name="RH" comment="" keysDown="T,L-1,L-2" keysTrillDown="RT-4" />
+      <ins:fingering name="LH" comment="" keysDown="T,L-1,L-2" keysTrillDown="L-Eb" />
+    </ins:note>
+    <ins:note name="D4-E4">
+      <ins:fingering name="Basic" comment="" keysDown="T,L-1" keysTrillDown="L-2" />
+    </ins:note>
+    <ins:note name="D#4-E4 / Eb4-Fb4">
+      <ins:fingering name="LH1" comment="" keysDown="T,L-1,RT-4" keysTrillDown="L-2" />
+      <ins:fingering name="LH2" comment="" keysDown="T,L-1,L-Eb" keysTrillDown="L-2" />
+      <ins:fingering name="RH" comment="" keysDown="T,L-1" keysTrillDown="R-1" />
+    </ins:note>
+    <ins:note name="D#4-E#4 / Eb4-F4">
+      <ins:fingering name="LH" comment="" keysDown="T,RT-4" keysTrillDown="L-1,L-2" />
+      <ins:fingering name="RH" comment="" keysDown="T,L-1,L-2,L-Eb" keysTrillDown="RT-3,RT-4" />
+    </ins:note>
+    <ins:note name="E4-F4">
+      <ins:fingering name="Basic" comment="" keysDown="T" keysTrillDown="L-1" />
+    </ins:note>
+    <ins:note name="E4-F#4 / Fb4-Gb4">
+      <ins:fingering name="Thumb" comment="" keysDown="L-1" keysTrillDown="T" />
+      <ins:fingering name="RH" comment="" keysDown="T,L-1" keysTrillDown="RT-3,RT-4" />
+    </ins:note>
+    <ins:note name="E#4-F#4 / F4-Gb4">
+      <ins:fingering name="Basic" comment="" keysDown="T" keysTrillDown="RT-3,RT-4" />
+    </ins:note>
+    <ins:note name="F4-G4">
+      <ins:fingering name="LH" comment="" keysDown="T" keysTrillDown="L-G#" />
+      <ins:fingering name="Thumb" comment="" keysDown="" keysTrillDown="T" />
+    </ins:note>
+    <ins:note name="F#4-G4">
+      <ins:fingering name="Basic" comment="" keysDown="" keysTrillDown="L-1" />
+    </ins:note>
+    <ins:note name="F#4-G#4 / Gb4-Ab4">
+      <ins:fingering name="Basic" comment="" keysDown="T,RT-3,RT-4" keysTrillDown="L-G#" />
+      <ins:fingering name="Cross" comment="LH 2 closes LH 1 hole while LH 1 trills" keysDown="L-1" keysTrillDown="L-G#" />
+    </ins:note>
+    <ins:note name="G4-Ab4">
+      <ins:fingering name="Basic" comment="" keysDown="" keysTrillDown="L-G#" />
+    </ins:note>
+    <ins:note name="G4-A4">
+      <ins:fingering name="Basic" comment="" keysDown="" keysTrillDown="L-A" />
+    </ins:note>
+    <ins:note name="G#4-A4">
+      <ins:fingering name="Basic" comment="" keysDown="L-G#" keysTrillDown="RT-2" />
+    </ins:note>
+    <ins:note name="G#4-A#4 / Ab4-Bb4">
+      <ins:fingering name="Basic" comment="" keysDown="L-G#" keysTrillDown="R-1" />
+    </ins:note>
+    <ins:note name="A4-Bb4">
+      <ins:fingering name="Basic" comment="" keysDown="L-A" keysTrillDown="RT-2" />
+    </ins:note>
+    <ins:note name="A4-B4">
+      <ins:fingering name="Basic" comment="" keysDown="L-A" keysTrillDown="RT-1" />
+    </ins:note>
+    <ins:note name="A#4-B4 / Bb4-Cb5">
+      <ins:fingering name="Basic" comment="" keysDown="R,L-A" keysTrillDown="RT-2" />
+    </ins:note>
+    <ins:note name="A#4-B#4 / Bb4-C5">
+      <ins:fingering name="OneKey" comment="" keysDown="R,L-A" keysTrillDown="R-1" />
+      <ins:fingering name="TwoKey" comment="More in tune than previous fingering" keysDown="R,L-A" keysTrillDown="R-1,R-2" />
+    </ins:note>
+    
+    
+    
+    <!-- Clarion Register -->
+    <ins:note name="-- Clarion Register --">
+        <ins:fingering name="B4-C6" comment="" />
+    </ins:note>
+    
+    <ins:note name="B4-C5">
+    <ins:fingering name="LH" comment="" keysDown="R,T,L-1,L-2,L-3,R-1,R-2,R-3,R-F" keysTrillDown="L-E" />
+      <ins:fingering name="RH" comment="" keysDown="R,T,L-1,L-2,L-3,L-F,R-1,R-2,R-3" keysTrillDown="R-E" />
+    </ins:note>
+    <ins:note name="B4-C#5 / Cb5-Db5">
+      <ins:fingering name="RH" comment="" keysDown="R,T,L-1,L-2,L-3,L-E,R-1,R-2,R-3" keysTrillDown="R-F#" />
+      <ins:fingering name="LH" comment="" keysDown="R,T,L-1,L-2,L-3,R-1,R-2,R-3,R-E" keysTrillDown="L-F#" />
+    </ins:note>
+    <ins:note name="B#4-C#5">
+      <ins:fingering name="LH" comment="" keysDown="R,T,L-1,L-2,L-3,R-1,R-2,R-3,R-F" keysTrillDown="L-F#" />
+      <ins:fingering name="RH" comment="" keysDown="R,T,L-1,L-2,L-3,L-F,R-1,R-2,R-3" keysTrillDown="R-F#" />
+    </ins:note>
+    <ins:note name="C5-D5">
+      <ins:fingering name="RH" comment="" keysDown="R,T,L-1,L-2,L-3,R-1,R-2,R-3" keysTrillDown="R-F" />
+      <ins:fingering name="LH" comment="" keysDown="R,T,L-1,L-2,L-3,R-1,R-2,R-3" keysTrillDown="L-F" />
+    </ins:note>
+    <ins:note name="C#5-D5">
+      <ins:fingering name="LH" comment="" keysDown="R,T,L-1,L-2,L-3,R-1,R-2,R-3" keysTrillDown="L-F#" />
+      <ins:fingering name="RH" comment="" keysDown="R,T,L-1,L-2,L-3,R-1,R-2,R-3" keysTrillDown="R-F#" />
+    </ins:note>
+    <ins:note name="C#5-D#5 / Db5-Eb5">
+      <ins:fingering name="Basic" comment="" keysDown="R,T,L-1,L-2,L-3,L-F#,R-1,R-2,R-3" keysTrillDown="R-G#" />
+      <ins:fingering name="BothHands" comment="" keysDown="R,T,L-1,L-2,L-3,R-1,R-2,R-3" keysTrillDown="L-F#,R-G#" />
+    </ins:note>
+    <ins:note name="D5-Eb5">
+      <ins:fingering name="Basic" comment="" keysDown="R,T,L-1,L-2,L-3,R-1,R-2,R-3" keysTrillDown="R-G#" />
+    </ins:note>
+    <ins:note name="D5-E5">
+      <ins:fingering name="Basic" comment="" keysDown="R,T,L-1,L-2,L-3,R-1,R-2" keysTrillDown="R-3" />
+    </ins:note>
+    <ins:note name="D#5-E5 / Eb5-Fb5">
+      <ins:fingering name="Basic" comment="" keysDown="R,T,L-1,L-2,L-3,R-1,R-2,R-G#" keysTrillDown="R-3" />
+    </ins:note>
+    <ins:note name="D#5-E#5 / Eb5-F5">
+      <ins:fingering name="TwoKey" comment="" keysDown="R,T,L-1,L-2,L-3,R-1,R-G#" keysTrillDown="R-2,R-3" />
+      <ins:fingering name="OneKey" comment="" keysDown="R,T,L-1,L-2,L-3,R-1,R-3,R-G#" keysTrillDown="R-2" />
+    </ins:note>
+    <ins:note name="E5-F5">
+      <ins:fingering name="Basic" comment="" keysDown="R,T,L-1,L-2,L-3,R-1" keysTrillDown="R-2" />
+    </ins:note>
+    <ins:note name="E5-F#5 / Fb5-Gb5">
+      <ins:fingering name="Basic" comment="" keysDown="R,T,L-1,L-2,L-3,R-2" keysTrillDown="R-1" />
+    </ins:note>
+    <ins:note name="E#5-F#5 / F5-Gb5">
+      <ins:fingering name="Basic" comment="" keysDown="R,T,L-1,L-2,L-3,R-1" keysTrillDown="R-B" />
+    </ins:note>
+    <ins:note name="F5-G5">
+      <ins:fingering name="Basic" comment="" keysDown="R,T,L-1,L-2,L-3" keysTrillDown="R-1" />
+    </ins:note>
+    <ins:note name="F#5-G5">
+      <ins:fingering name="Basic" comment="" keysDown="R,T,L-1,L-2,L-3" keysTrillDown="R-2" />
+    </ins:note>
+    <ins:note name="F#5-G#5 / Gb5-Ab5">
+      <ins:fingering name="Alt1" comment="" keysDown="R,T,L-1,L-2,L-3,R-2" keysTrillDown="L-C#" />
+      <ins:fingering name="Alt2" comment="" keysDown="R,T,L-1,L-2,L-3,R-3" keysTrillDown="L-C#" />
+      <ins:fingering name="Alt3" comment="" keysDown="R,T,L-1,L-2,L-3,R-1,R-B" keysTrillDown="L-C#" />
+      <ins:fingering name="Alt4" comment="" keysDown="R,T,L-2,L-3,R-2" keysTrillDown="L-1" />
+      <ins:fingering name="Alt5" comment="" keysDown="R,T,L-2,L-3,R-1,R-B" keysTrillDown="L-1" />
+      <ins:fingering name="Alt6" comment="For models with an articulated C#/G# key" keysDown="R,T,L-1,L-2,L-3,L-C#" keysTrillDown="R-2" />
+    </ins:note>
+    <ins:note name="G5-Ab5">
+      <ins:fingering name="Basic" comment="" keysDown="R,T,L-1,L-2,L-3" keysTrillDown="L-C#" />
+    </ins:note>
+    <ins:note name="G5-A5">
+      <ins:fingering name="LH" comment="" keysDown="R,T,L-1,L-2" keysTrillDown="L-3" />
+      <ins:fingering name="RH" comment="" keysDown="R,T,L-1,L-2,L-3" keysTrillDown="RT-4" />
+    </ins:note>
+    <ins:note name="G#5-A5">
+      <ins:fingering name="LHOneKey" comment="" keysDown="R,T,L-1,L-2,L-C#" keysTrillDown="L-3" />
+      <ins:fingering name="LHTwoKey" comment="" keysDown="R,T,L-1,L-2" keysTrillDown="L-3,L-C#" />
+      <ins:fingering name="RH" comment="" keysDown="R,T,L-1,L-2" keysTrillDown="R-1,R-2" />
+    </ins:note>
+    <ins:note name="G#5-A#5 - Ab5-Bb5">
+      <ins:fingering name="LH1" comment="" keysDown="R,T,L-2,L-3,L-C#" keysTrillDown="L-1" />
+      <ins:fingering name="RH" comment="" keysDown="R,T,L-1,L-2,L-3,L-C#" keysTrillDown="RT-4" />
+      <ins:fingering name="LH2" comment="" keysDown="R,T,L-2,R-1,R-2" keysTrillDown="L-1" />
+    </ins:note>
+    <ins:note name="A5-Bb5">
+      <ins:fingering name="LH" comment="" keysDown="R,T,L-1,L-2" keysTrillDown="L-Eb" />
+      <ins:fingering name="RH" comment="" keysDown="R,T,L-1,L-2" keysTrillDown="RT-4" />
+    </ins:note>
+    <ins:note name="A5-B5">
+      <ins:fingering name="LH-2" comment="" keysDown="R,T,L-1" keysTrillDown="L-2" />
+      <ins:fingering name="LH-1" comment="" keysDown="R,T,L-2" keysTrillDown="L-1" />
+    </ins:note>
+    <ins:note name="A#5-B5 / Bb5-Cb6">
+      <ins:fingering name="LH" comment="" keysDown="R,T,L-1,RT-4" keysTrillDown="L-2" />
+      <ins:fingering name="RH" comment="" keysDown="R,T,L-1" keysTrillDown="R-1" />
+    </ins:note>
+    <ins:note name="A#5-B#5 / Bb5-C6">
+      <ins:fingering name="LH" comment="" keysDown="R,T,RT-4" keysTrillDown="L-1,L-2" />
+      <ins:fingering name="RH" comment="" keysDown="R,T,L-1,L-2,L-Eb" keysTrillDown="RT-3,RT-4" />
+    </ins:note>
+    <ins:note name="B5-C6">
+      <ins:fingering name="Basic" comment="" keysDown="R,T" keysTrillDown="L-1" />
+    </ins:note>
+    <ins:note name="B5-C#6 / Cb6-Db6">
+      <ins:fingering name="LH" comment="" keysDown="L-1" keysTrillDown="R,T" />
+      <ins:fingering name="RH1" comment="" keysDown="R,T,L-1" keysTrillDown="RT-3,RT-4" />
+      <ins:fingering name="RH2" comment="" keysDown="R,T,L-1" keysTrillDown="RT-4" />
+      <ins:fingering name="RH3" comment="" keysDown="R,T,L-1,L-3,R-1,R-2" keysTrillDown="R-3" />
+    </ins:note>
+    <ins:note name="B5-C#6 / Cb6-Db6">
+      <ins:fingering name="Basic" comment="" keysDown="R,T" keysTrillDown="RT-3,RT-4" />
+    </ins:note>
+    <ins:note name="C6-D6">
+      <ins:fingering name="LH" comment="" keysDown="R,T" keysTrillDown="L-G#" />
+      <ins:fingering name="RH" comment="" keysDown="R,T" keysTrillDown="RT-2" />
+      <ins:fingering name="Cross" comment="For soprano models" keysDown="R,T" keysTrillDown="L-G#,RT-4" />
+      <ins:fingering name="mf-ff" comment="Good intonation and response. Works well at mf to ff dynamics" keysDown="R,T,L-2,L-3,R-2,R-3,R-G#" keysTrillDown="R-1" />
     </ins:note>
   </ins:set>
+
 </ins:instrument>
+
+

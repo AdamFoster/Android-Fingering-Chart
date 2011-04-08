@@ -6,6 +6,7 @@ public class BaseKey
     public static final int TYPE_RECTANGLE = 2;
     public static final int TYPE_IMAGE = 3;
     public static final int TYPE_ROUNDRECT = 4;
+    public static final int TYPE_OVAL = 5;
     public static final int TYPE_NULL = 0;
     public static final int TYPE_UNKNOWN = -1;
     
@@ -16,6 +17,7 @@ public class BaseKey
     public float radius;
     public float width;
     public float height;
+    public float angle;
     public String imglocation;
     public float rx;
     public float ry;
@@ -38,6 +40,10 @@ public class BaseKey
         else if (attributeValue.toLowerCase().equals("rectangle"))
         {
             return TYPE_RECTANGLE;
+        }
+        else if (attributeValue.toLowerCase().equals("oval"))
+        {
+            return TYPE_OVAL;
         }
         else if (attributeValue.toLowerCase().equals("image"))
         {

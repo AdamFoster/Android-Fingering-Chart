@@ -45,7 +45,7 @@ public class Chart extends Activity implements OnItemSelectedListener
         Bundle extras = getIntent().getExtras();
         mInstrumentXml = (extras != null 
                 ? extras.getInt(Menu.INSTRUMENT_NAME, R.xml.flute)
-                : R.xml.flute);
+                : R.xml.clarinet);
         
         mInstrument = parse();
         
@@ -56,6 +56,20 @@ public class Chart extends Activity implements OnItemSelectedListener
 
         populateType();
     }
+    
+    private void setup(int xml)
+    {
+        mInstrumentXml = xml;
+        mInstrument = parse();
+        
+        FingerSurface fs = (FingerSurface) findViewById(R.id.SurfaceView01);
+        fs.setInstrument(mInstrument);
+        
+        gd = new GestureDetector(new MyGestureDetector());
+
+        populateType();
+    }
+    
     
     @Override
     public boolean onTouchEvent(MotionEvent event)
@@ -180,8 +194,7 @@ public class Chart extends Activity implements OnItemSelectedListener
             
             if (id != 0)
             {
-                //TODO: load id here!
-                
+                setup(id);
                 
                 return true;
             }
@@ -224,6 +237,7 @@ public class Chart extends Activity implements OnItemSelectedListener
                         bk.radius = xrp.getAttributeFloatValue(null, "radius", 0);
                         bk.width = xrp.getAttributeFloatValue(null, "width", 0);
                         bk.height = xrp.getAttributeFloatValue(null, "height", 0);
+                        bk.angle = xrp.getAttributeFloatValue(null, "angle", 0);
                         bk.imglocation = xrp.getAttributeValue(null, "imglocation");
                         ins.baseKeys.add(bk);
                     }
@@ -251,56 +265,6 @@ public class Chart extends Activity implements OnItemSelectedListener
                         fingering.ringsTrillUps = uzip(xrp.getAttributeValue(null, "ringsTrillUp"));
                         fingering.keysHalfDowns = uzip(xrp.getAttributeValue(null, "keysHalfDown"));
                     }
-                    /*
-                    else if (currentTag.equals("keysDown"))
-                    {
-                        mode = MODE_DOWN;
-                    }
-                    else if (currentTag.equals("keysTrillDown"))
-                    {
-                        mode = MODE_TRILLDOWN;
-                    }
-                    else if (currentTag.equals("keysTrillUp"))
-                    {
-                        mode = MODE_TRILLUP;
-                    }
-                    else if (currentTag.equals("ringsDown"))
-                    {
-                        mode = MODE_RING_DOWN;
-                    }
-                    else if (currentTag.equals("ringsTrillDown"))
-                    {
-                        mode = MODE_RING_TRILLDOWN;
-                    }
-                    else if (currentTag.equals("ringsTrillUp"))
-                    {
-                        mode = MODE_RING_TRILLUP;
-                    }
-                    else if (currentTag.equals("key"))
-                    {
-                        switch (mode)
-                        {
-                            case MODE_DOWN:
-                                fingering.keysDowns.add(xrp.nextText());
-                                break;
-                            case MODE_TRILLDOWN:
-                                fingering.keysTrillDowns.add(xrp.nextText());
-                                break;
-                            case MODE_TRILLUP:
-                                fingering.keysTrillUp.add(xrp.nextText());
-                                break;
-                            case MODE_RING_DOWN:
-                                fingering.ringsDowns.add(xrp.nextText());
-                                break;
-                            case MODE_RING_TRILLDOWN:
-                                fingering.ringsTrillDowns.add(xrp.nextText());
-                                break;
-                            case MODE_RING_TRILLUP:
-                                fingering.ringsTrillUps.add(xrp.nextText());
-                                break;
-                        }
-                    }
-                    // */
                 }
                 else if (xrp.getEventType() == XmlResourceParser.END_TAG)
                 {

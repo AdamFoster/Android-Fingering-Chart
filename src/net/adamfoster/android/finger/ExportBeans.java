@@ -6,7 +6,6 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.util.List;
 
-import net.adamfoster.android.finger.beans.BaseKey;
 import net.adamfoster.android.finger.beans.Fingering;
 import net.adamfoster.android.finger.beans.Instrument;
 import net.adamfoster.android.finger.beans.Note;
@@ -108,7 +107,6 @@ public class ExportBeans
             }
             catch (IOException e)
             {
-                // TODO Auto-generated catch block
                 e.printStackTrace();
                 Log.e("Export", "Failed");
             }

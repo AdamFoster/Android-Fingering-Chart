@@ -26,8 +26,8 @@
         <!-- trills -->
         <ins:baseKey name="T1" positionx="0.378" positiony="0.519" type="rectangle" width="0.024" height="0.01" />
         <ins:baseKey name="T2" positionx="0.378" positiony="0.584" type="rectangle" width="0.024" height="0.01" />
-        <ins:baseKey name="BbTrill" positionx="0.328" positiony="0.446" type="circle" radius="0.01" />
-        <ins:baseKey name="C#Trill" positionx="0.260" positiony="0.470" type="circle" radius="0.01" />
+        <ins:baseKey name="C#Trill" positionx="0.328" positiony="0.446" type="circle" radius="0.01" />
+        <ins:baseKey name="BbTrill" positionx="0.260" positiony="0.470" type="circle" radius="0.01" />
     </ins:baseKeys>
     
     <ins:set name="Notes">
@@ -77,6 +77,11 @@
         <ins:note name="B4">
             <ins:fingering name="Standard" comment="" keysDown="C,B,EbFoot" />
         </ins:note>
+        
+        <ins:note name="-- Second Octave --">
+            <ins:fingering name="C5-B5" comment="" keysDown="" />
+        </ins:note>
+        
         <ins:note name="C5">
             <ins:fingering name="Standard" comment="" keysDown="C,EbFoot" />
         </ins:note>
@@ -115,6 +120,11 @@
         <ins:note name="B5">
             <ins:fingering name="Standard" comment="" keysDown="C,B,EbFoot" />
         </ins:note>
+
+        <ins:note name="-- Third Octave --">
+            <ins:fingering name="C6-B6" comment="" keysDown="" />
+        </ins:note>
+        
         <ins:note name="C6">
             <ins:fingering name="Standard" comment="" keysDown="C,EbFoot" />
         </ins:note>
@@ -210,6 +220,11 @@
             <ins:fingering name="Flat3" comment="" keysDown="B,C,A,T1,T2,D,EbFoot" />
             <ins:fingering name="Bass" comment="Great for bass flute" keysDown="B,G,DbFoot" />
         </ins:note>
+
+        <ins:note name="-- Forth Octave --">
+            <ins:fingering name="C7-C8" comment="" keysDown="" />
+        </ins:note>
+        
         <ins:note name="C7">
             <ins:fingering name="BFoot" comment="Basic for use with B-foot" keysDown="C,A,G,G#,F,Gizmo" />
             <ins:fingering name="CFoot" comment="Basic for use with B-foot" keysDown="C,A,G,G#,F,EbFoot" />
@@ -422,6 +437,12 @@
             <ins:fingering name="Standard" comment="Basic" keysDown="EbFoot" keysTrillDown="C" />
             <ins:fingering name="C#Trill" comment="Basic with C# Trill Key" keysDown="C,EbFoot" keysTrillDown="C#Trill" />
         </ins:note>
+        
+        
+        <ins:note name="-- Second Octave --">
+            <ins:fingering name="C5-B6" comment="" keysDown="" />
+        </ins:note>
+        
         <ins:note name="C5-D5">
             <ins:fingering name="Standard" comment="Basic" keysDown="C,EbFoot" keysTrillDown="T1" />
         </ins:note>
@@ -514,6 +535,11 @@
             <ins:fingering name="C#Trill" comment="Basic with C# Trill Key" keysDown="C,EbFoot" keysTrillDown="C#Trill" />
             <ins:fingering name="Alt1" comment="Sharp" keysDown="B,A,G,E,EbFoot" keysTrillDown="F" />
         </ins:note>
+        
+        <ins:note name="-- Third Octave --">
+            <ins:fingering name="C6-B6" comment="" keysDown="" />
+        </ins:note>
+        
         <ins:note name="C6-D6">
             <ins:fingering name="Standard" comment="Basic" keysDown="C,EbFoot" keysTrillDown="T2" />
             <ins:fingering name="Alt1" comment="Flat D" keysDown="C,EbFoot" keysTrillDown="T1" />
@@ -760,6 +786,11 @@
             <ins:fingering name="Flat" comment="" keysDown="C,EbFoot" keysTrillDown="T2" />
             <ins:fingering name="Sharp" comment="" keysDown="C,EbFoot" keysTrillDown="T1,T2" />
         </ins:note>
+
+        <ins:note name="-- Second Octave --">
+            <ins:fingering name="C5-B5" comment="" keysDown="" />
+        </ins:note>
+        
         <ins:note name="C5-E5">
             <ins:fingering name="Standard" comment="Basic" keysDown="C,G,F,E,EbFoot" keysTrillDown="B,A" />
             <ins:fingering name="Harmonic" comment="Harmonic C4-E4" keysDown="C,B,G,F,E,DbFoot,CFoot" keysTrillDown="D" />
@@ -846,6 +877,11 @@
             <ins:fingering name="Standard" comment="Basic" keysDown="C,EbFoot" keysTrillDown="T1,T2" />
             <ins:fingering name="Alt1" comment="Basic" keysDown="C,A,G,G#,F,E,D,EbFoot" keysTrillDown="B" />
         </ins:note>
+
+        <ins:note name="-- Third Octave --">
+            <ins:fingering name="C6-B6" comment="" keysDown="" />
+        </ins:note>
+        
         <ins:note name="C6-E6">
             <ins:fingering name="Harmonic" comment="Basic harmonic F4-A4" keysDown="C,B,A,EbFoot" keysTrillDown="G,F" />
         </ins:note>
